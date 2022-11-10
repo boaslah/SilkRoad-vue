@@ -73,7 +73,6 @@ export default {
 .page{
     display: grid;
     grid-template-rows: 50% 50%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
 }
 

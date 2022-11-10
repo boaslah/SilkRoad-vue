@@ -8,8 +8,12 @@
             </div>
 
             <div>
-                <input type="text" name="" id="homepage-input" placeholder="    &#128269;    FIND A PROPERTY">
-                <h3>FILTER</h3>
+                <input type="text" name="" id="homepage-input" placeholder="    &#128269;  FIND A PROPERTY">
+                <h3> <i class="fa fa-filter" ></i>         FILTER</h3>
+                <div class="main-bottom">
+                    <h4>OUR LATEST POSTINGS</h4>
+                    <i class="fa fa-circle-check"></i>
+                </div>
             </div>
         </div>
         <div class="main3"></div>
@@ -27,12 +31,25 @@ export default {
 
 <style scoped>
 
+h3 i{
+    color: white;
+    margin-top: 3%;
+}
+
 .main h1{
     text-align: center;
 }
     
 .main2{
     padding: 0% 10% 0% 10%;
+}
+.main-bottom{
+    text-align: center;
+    margin-top: 20%;
+}
+.main-bottom i{
+    margin-top: -15%;
+    font-size: 35px;
 }
 
 .main{
@@ -53,13 +70,12 @@ export default {
 }
 h3{
     margin: auto;
-    display: block;
+    display: block;  
     text-align: right;
-    margin: 2% 1% 0% 0%;
+    margin: 1% 2% 0% 0%;
 }
 ::placeholder{
-    color: white;
-    font-size: 1rem;
+    color: white !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -80,7 +96,7 @@ h3{
 @media only screen and (max-width: 1000px) {
 
     .main{
-        margin: 50% 0% 0% -2%;
+        margin: 30% 0% 0% -2%;
         display: grid;
         grid-template-columns: 5% 90% 5%;
     }
