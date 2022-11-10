@@ -45,11 +45,11 @@ h3 i{
 }
 .main-bottom{
     text-align: center;
-    margin-top: 20%;
+    margin-top: 18%;
 }
 .main-bottom i{
     margin-top: -15%;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .main{
@@ -81,28 +81,34 @@ h3{
 @media only screen and (max-width: 600px) {
    
     .main{
-        margin: 70% 0% 0% -2%;
+        margin: 70% 0% -40% -2%;
         display: grid;
         grid-template-columns: 5% 90% 5%;
     }
     #homepage-input{
-        width: 70%;
-        padding: 3%;
+        width: 94%;
+        padding: 10%;
     }
-
-
+    .main-bottom{
+        text-align: center;
+        margin-top: 100%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
 
     .main{
-        margin: 30% 0% 0% -2%;
+        margin: 40% 0% 0% -2%;
         display: grid;
         grid-template-columns: 5% 90% 5%;
     }
     #homepage-input{
-        width: 70%;
-        padding: 1%;
+        width: 94%;
+        padding: 1.5%;
+    }
+    .main-bottom{
+        text-align: center;
+        margin-top: 80%;
     }
 }
 </style>
