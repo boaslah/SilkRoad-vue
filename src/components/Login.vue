@@ -4,19 +4,13 @@
         <div class="main1"></div>
         <div class="main2">
             <div>
-                <h1>Real Estate Without the Hassel</h1>
+                <h1>
             </div>
 
             <div>
-                <input type="text" name="" id="homepage-input" placeholder="    &#128269;  FIND A PROPERTY">
-                <h3> <i class="fa fa-filter" ></i>         FILTER</h3>
-                <div class="main-bottom">
-                    <h4>OUR LATEST POSTINGS</h4>
-                    <i class="fa fa-circle-check"></i>
-                </div>
+               
             </div>
         </div>
-        <div class="main3"></div>
     </div>
     
 </template>
@@ -24,7 +18,7 @@
 <script>
 
     export default {
-        name: 'HomePage'
+        name: 'LoginPage'
     }
 
 </script>

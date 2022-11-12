@@ -11,12 +11,15 @@ import HomePage from '../components/HomePage'
 export default {
   name: 'HomeView',
   components: {
-    HomePage
+    HomePage,
+  },
+  beforeCreate: function() {
+    document.body.className = 'home';
   }
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
 

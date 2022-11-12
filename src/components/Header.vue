@@ -23,7 +23,7 @@
 
                             <router-link to="/">Home</router-link>  
 
-                            <router-link to="/properties" class="property" >Properties</router-link>
+                            <router-link to="/properties-grid" class="property" >Properties</router-link>
 
                         </span>
 
@@ -57,9 +57,9 @@
 
 <script>
 
-export default {
-   name: 'Header'
-}
+    export default {
+    name: 'Header'
+    }
 
 </script>
 
@@ -186,13 +186,13 @@ hr{
         padding-bottom: 4%;
     }
     hr{
-        width: 91%;
+        width: 93.5%;
     }
     .register{
-        margin: -3% 0% 0% 76%; 
+        margin: -3% 0% 0% 78%; 
     }
     .row2 button{
-        margin: -1% 0% 0% 71%; 
+        margin: -1% 0% 0% 74%; 
         width: 20%;
     }
 }

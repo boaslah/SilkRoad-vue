@@ -1,14 +1,19 @@
 <template>
-  <div class="page">
-  </div>
+    
+
+
 </template>
 
 <script>
-// @ is an alias to /src
-
-export default {
-  name: 'login',
-  components: {
+  export default {
+      beforeCreate: function() {
+        document.body.className = 'login';
+      }
   }
-}
+
 </script>
+
+<style scoped>
+
+</style>
+
