@@ -31,17 +31,19 @@
             <div class="col2-row1">
                 <div class="prop-menu">
                     <div class="prop-menu1">
-                        <p>All</p>
+                        <p class="active">All</p>
                         <p>Recent</p>
                         <p>Sale</p>
                     </div>
                     <div class="prop-menu2">
                         <p>View</p>     
-                        <!-- <i class="fa fa-solid fa-list"></i> -->
-                        <i class="fa-duotone fa-grid-2"></i>
+                        <i class="fa fa-solid fa-list icon1"></i>
+                        <i class="fa-sharp fa-solid fa-border-all icon1"></i>
                         <p>Sort By</p>
-                        <input class="input-field" type="text" placeholder="Search">
-                        <!-- <i class="fa fa-circle-check icon"></i> -->
+                        <div class="input-icons">
+                            <input class="input-field" type="text" placeholder="Search">
+                            <i class="fa fa-caret-down icon"></i>
+                        </div>
                     </div>
 
                 </div>
@@ -118,20 +120,16 @@
 
 <style scoped>
 
+.icon1{
+    width: 5%;
+    margin-top: 4%;
+}
 
-.input-icons i {
-    position: absolute;
-    background-color:rgba(98, 110, 114, 0.863); ;
-}
-    
-.input-icons {
-    width: 100%;
-    /* margin-bottom: 10px; */
-}
     
 .icon {
-    padding:0.6%;
-    min-width: 2;
+    padding:3.3%;
+    background-color:rgba(98, 110, 114, 0.863);
+    color: black;
 }
 
 .prop-menu{
@@ -186,9 +184,9 @@ h2{
 }
 .col2-row1 input{
     border: none;
-    padding: 2%;
-    width: 50%;
-    margin: 2% 0% 5% 0%;
+    padding: 4%;
+    width: 80%;
+    margin: 4% 0% 5% 0%;
 
 }
 .col1 button{

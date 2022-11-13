@@ -21,7 +21,7 @@
 
                         <span class="menu">
 
-                            <router-link to="/">Home</router-link>  
+                            <router-link to="/" class="active">Home</router-link>  
 
                             <router-link to="/properties-grid" class="property" >Properties</router-link>
 
@@ -65,10 +65,6 @@
 
 
 <style scoped>
-
-.active{
-    color:aqua;
-}
 
 .page{
     display: grid;

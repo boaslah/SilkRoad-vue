@@ -18,6 +18,9 @@ export default {
 
 
 <style>
+.active{
+    color:rgb(91, 170, 170);
+}
 body{
   font-family: 'Roboto', serif;
 }
