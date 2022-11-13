@@ -176,7 +176,7 @@ hr{
     }
 
     #cover{
-        background-color: rgba(56, 56, 59, 0.623);
+        background-color: rgba(56, 56, 59, 0.952);
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -196,7 +196,7 @@ hr{
     .menu-div{
         background-color: rgb(44, 44, 44);
         border-radius: 5%;
-        margin:5%;
+        margin:10%;
         padding: 5%;
     }
 
