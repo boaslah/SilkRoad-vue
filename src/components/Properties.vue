@@ -122,7 +122,7 @@
 
 .icon1{
     width: 5%;
-    margin-top: 4%;
+    margin-top: 3.5%;
 }
 
     
@@ -134,8 +134,8 @@
 
 .prop-menu{
     display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 5%;
+    grid-template-columns: 40% 60%;
+    /* column-gap: 5%; */
     margin: 1% 5% 0% 5%;
     color: rgba(98, 110, 114, 0.863);
 }
