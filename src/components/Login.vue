@@ -8,7 +8,7 @@
                 <h2 style="color:white;">Already have an account?</h2>
 
                 <p style="color:white;">If you do have an account fill in the form <br>and click done to login to your account,
-                <br>else click register to register into your <br>account.</p>
+                <br>else click register to register your <br>account.</p>
 
                 <button>REGISTER</button>
             </div>
