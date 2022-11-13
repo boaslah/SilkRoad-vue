@@ -6,7 +6,7 @@
 
             <div class="row1">
                 <h1 class="title">SILKROAD</h1>
-                <div class="hamburger-menu">
+                <div @click="showMenu('cover')" class="hamburger-menu">
                     <div class="hamburger"></div>
                     <div class="hamburger"></div>
                     <div class="hamburger"></div>
@@ -49,6 +49,22 @@
                 
             </div>
         </div>
+        <div @click="hideMenu('cover')" id="cover">
+            <div class="mobile-menu">
+                <div class="menu-div">
+                    <router-link to="/">Home</router-link>
+                </div>
+                <div class="menu-div">
+                    <router-link to="/properties-grid">Properties</router-link>
+                </div>
+                <div class="menu-div">
+                    <router-link to="/login">Login</router-link>
+                </div>
+                <div class="menu-div">
+                    <router-link to="/register">Register</router-link>
+                </div>
+            </div>
+        </div>
 
     </div>
   <router-view/>
@@ -57,15 +73,28 @@
 
 <script>
 
+
     export default {
-    name: 'Header'
+        name: 'Header',
+        methods:{
+            showMenu(id){
+                let name = document.getElementById(id);
+                name.style.display = "block";   
+            },
+            hideMenu(id){
+                 let name = document.getElementById(id);
+                name.style.display = "none";      
+            }
+        }
     }
 
 </script>
 
 
 <style scoped>
-
+#cover{
+    display: none;
+}
 .page{
     display: grid;
     grid-template-rows: 50% 50%;
@@ -144,6 +173,31 @@ hr{
         width: 30%;
         padding: 1%;
         margin: 13% 5% 1% 11%;
+    }
+
+    #cover{
+        background-color: rgba(56, 56, 59, 0.623);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 9;
+        margin: 0% -20% 0% -2%;
+        padding: 2%;
+    }
+    #cover a{
+        color: white;
+        text-decoration: none;
+        padding: 5%;
+        font-size: 2rem;
+    }
+    .mobile-menu{
+        margin-top: 25%;
+    }
+    .menu-div{
+        background-color: rgb(44, 44, 44);
+        border-radius: 5%;
+        margin:5%;
+        padding: 5%;
     }
 
     .hamburger{

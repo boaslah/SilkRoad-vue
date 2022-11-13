@@ -31,6 +31,7 @@ body.home, body.login, body.register{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
+  position: relative;
 }
 
 body.propertiesView{
