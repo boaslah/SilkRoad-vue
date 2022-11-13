@@ -247,10 +247,9 @@ h2{
         display: flex;
         flex-direction: column;
         row-gap: 5%;
-        margin-left: 25%;
     }
     img{
-        width: 100% !important;
+        width: 150% !important;
     }
     .col2-row1{
         padding: 1% !important;
