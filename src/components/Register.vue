@@ -4,31 +4,34 @@
 
         <div class="main1"></div>
         <div class="main2">
-            <div class="main2-col1">
-                <h2 style="color:white;">Don't have an account?</h2>
-
-                <p style="color:white;">If you do have an account fill in the form <br>and click done to login to your account,
-                <br>else click register to register your <br>account.</p>
-
-                <button>REGISTER</button>
-            </div>
             <div class="main2-col2">
                 <div class="login">
 
-                    <h1>LOGIN</h1>
+                    <h1>REGISTER</h1>
+
                     <div class="input1">
-                        <i class="fa fa-phone icon"></i><input type="text" placeholder="Phone Number"><br>
+                        <i class="fa fa-user icon"></i><input type="text" placeholder="Full Name">
+                    </div>
+                    <div class="input2">
+                        <i class="fa fa-phone icon"></i><input type="text" placeholder="Phone Number">
                     </div>
 
-                    <div class="input2">
+                    <div class="input3">
                         <i class="fa-solid fa-lock icon"></i><input type="text" placeholder="Password">
                     </div>
 
-                    <p class="active">Forget your password?</p>
+                    <p>I agree to the terms   <i class="fa-sharp fa-solid fa-square-check"></i></p>
 
-                    <button>Login</button>
+                    <button>Register</button>
 
                 </div>
+            </div>
+            <div class="main2-col1">
+                <h2>Already have an account?</h2>
+
+                <p>If you already have an account, click<br> the login button to login to your account.<br> If you don't, fill in the form to register</p>
+
+                <button>LOGIN</button>
             </div>
         </div>
 
@@ -42,7 +45,7 @@
 <script>
 
     export default {
-        name: 'Login'
+        name: 'Register'
     }
 
 </script>
@@ -58,10 +61,7 @@
     padding: 3%;
 }
 
-.input1{
-    display: flex;
-}
-.input2{
+.input1, .input2, .input3{
     display: flex;
 }
 
@@ -123,6 +123,7 @@
 .main2{
     display: grid;
     grid-template-columns: 50% 50%;
+    column-gap: 7%;
     padding: 5% 5% 5% 5%;
     background-color: rgba(0, 0, 0, 0.568);
 }
@@ -134,12 +135,16 @@
     .main2{
         display: flex;
         flex-direction: column;
-        padding-bottom: 35%;
+        padding-bottom: 8%;
         margin-top: 20% !important;
     }
     .main2-col2{
         margin-top: 5%;
         padding-bottom: 5%;
+    }
+     .main2-col1{
+        margin-top: 25%;
+        padding-bottom: 2%;
     }
 }
 @media only screen and (max-width: 1000px) {
