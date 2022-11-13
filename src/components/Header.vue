@@ -5,12 +5,7 @@
         <div class="head">
 
             <div class="row1">
-                <h1 class="title">SILKROAD</h1>
-                <div @click="showMenu('cover')" class="hamburger-menu">
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                </div>
+                <h1 class="title">SILKROAD</h1><i @click="showMenu('cover')" class="fa fa-bars icon"></i>
             </div>
             
             <div class="row2">
@@ -114,6 +109,10 @@
     margin: -2.5% 0% 0% -2%;
 }
 
+.icon{
+    display: none;
+}
+
 .row2 a{
     text-decoration: none;
     color: white;
@@ -169,11 +168,13 @@ hr{
 
 @media only screen and (max-width: 600px) {
 
-   .hamburger-menu{
-        width: 30%;
-        padding: 1%;
-        margin: 13% 5% 1% 11%;
+    .icon{
+        font-size: 2.5rem;
+        margin: 10% 10% 10% 25%;
+        display: block;
+        float: right;
     }
+
 
     #cover{
         background-color: rgba(56, 56, 59, 0.952);
@@ -199,13 +200,6 @@ hr{
         margin:10%;
         padding: 5%;
     }
-
-    .hamburger{
-        width: 60%;
-        background-color: white;
-        margin: 2% -5% 6% 10%;
-        padding: 3.5%;
-    } 
 
     .row2{
         display: none;
