@@ -176,7 +176,7 @@ hr{
     }
 
 
-    #cover{
+    #cover{  
         background-color: rgba(56, 56, 59, 0.952);
         width: 100%;
         height: 100vh;

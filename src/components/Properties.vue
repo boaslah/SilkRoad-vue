@@ -52,41 +52,9 @@
             <div class="col2-row2">
 
                 <div class="row2-col1">
-
-                    <div class="img-grid">
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                    </div>
-                    <div class="img-grid">
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                    </div>
-
-                    <div class="img-grid">
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                        <div>
-                            <img src="../assets/grid1-mobile.jpg" alt="houses">
-                        </div>
-                    </div>                    
+                    <Houses />
+                    <Houses />
+                    <Houses />
                 </div>
                 <div class="row2-col2">
 
@@ -107,12 +75,15 @@
 
 <script>
 
+    import Houses from "./Houses"
+
     import Footer from "./Footer"
 
     export default {
         name: 'Properties',
         components:{
-            Footer
+            Footer, 
+            Houses
         }
     }
 
@@ -142,13 +113,6 @@
 .prop-menu1, .prop-menu2{
     display: flex;
     column-gap: 5%;
-}
-
-.img-grid{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    column-gap: 1%;
-    margin-bottom: 3%;
 }
 
 .properties-main{
@@ -243,14 +207,7 @@ h2{
         flex-direction: column;
         margin: 30% 10% 0% 1%;
     }
-    .img-grid{
-        display: flex;
-        flex-direction: column;
-        row-gap: 5%;
-    }
-    img{
-        width: 150% !important;
-    }
+   
     .col2-row1{
         padding: 1% !important;
     }
@@ -266,8 +223,6 @@ h2{
     .btn2{
         display: none;
     }
-
-
 }
 </style>
 
