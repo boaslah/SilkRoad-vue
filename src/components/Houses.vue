@@ -109,7 +109,7 @@ img{
 @media only screen and (max-width: 600px) {
 
     .houses{
-        width: 140%;
+        width: 145%;
         margin-top: 10%;
     }
 
