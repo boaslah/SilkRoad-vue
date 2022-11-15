@@ -4,7 +4,7 @@
         <div class="main1"></div>
         <div class="main2">
             <div>
-                <h1>Real Estate Without the Hassel</h1>
+                <h1>Real Estate Without the Hassle</h1>
             </div>
 
             <div>
