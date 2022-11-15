@@ -1,89 +1,110 @@
 <template>
 
-    <div class="properties-main">
+    <div>
+        <div class="properties-main">
 
-        <div class="col1">
+            <div class="col1">
 
-            <div class="side-nav input-icons">
-                <h3>Search</h3>
-                <input class="input-field" type="text" placeholder="Most Recent">
-                <i class="fa fa-caret-down icon"></i>
-                <h3>Category</h3>
-                <input class="input-field" type="text" placeholder="Most Recent">
-                <i class="fa fa-caret-down icon"></i>
-                <h3>Location</h3>
-                <input class="input-field" type="text" placeholder="Most Recent">
-                <i class="fa fa-caret-down icon"></i>
-                <h3>Bedrooms</h3>
-                <input class="input-field" type="text" placeholder="Most Recent">
-                <i class="fa fa-caret-down icon"></i>
-                <h3>Bathrooms</h3>
-                <input class="input-field" type="text" placeholder="Most Recent">
-                <i class="fa fa-caret-down icon"></i>
-                <div>
-                    <h3>Price   $00.00-$10,000.00</h3>
-                    <input type="range" value="50">
-                </div>
-                <button>Done</button>
-            </div>
-        </div>
-        <div class="col2">
-            <div class="col2-row1">
-                <div class="prop-menu">
-                    <div class="prop-menu1">
-                        <p class="active">All</p>
-                        <p>Recent</p>
-                        <p>Sale</p>
+                <div class="side-nav input-icons">
+                    <h3>Search</h3>
+                    <input class="input-field" type="text" placeholder="Most Recent">
+                    <i class="fa fa-caret-down icon"></i>
+                    <h3>Category</h3>
+                    <input class="input-field" type="text" placeholder="Most Recent">
+                    <i class="fa fa-caret-down icon"></i>
+                    <h3>Location</h3>
+                    <input class="input-field" type="text" placeholder="Most Recent">
+                    <i class="fa fa-caret-down icon"></i>
+                    <h3>Bedrooms</h3>
+                    <input class="input-field" type="text" placeholder="Most Recent">
+                    <i class="fa fa-caret-down icon"></i>
+                    <h3>Bathrooms</h3>
+                    <input class="input-field" type="text" placeholder="Most Recent">
+                    <i class="fa fa-caret-down icon"></i>
+                    <div>
+                        <h3>Price   $00.00-$10,000.00</h3>
+                        <input type="range" value="50">
                     </div>
-                    <div class="prop-menu2">
-                        <p>View</p>     
-                        <i class="fa fa-solid fa-list icon1"></i>
-                        <i class="fa-sharp fa-solid fa-border-all icon1"></i>
-                        <p>Sort By</p>
-                        <div class="input-icons">
-                            <input class="input-field" type="text" placeholder="Search">
-                            <i class="fa fa-caret-down icon"></i>
+                    <button>Done</button>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="col2-row1">
+                    <div class="prop-menu">
+                        <div class="prop-menu1">
+                            <p class="active">All</p>
+                            <p>Recent</p>
+                            <p>Sale</p>
+                        </div>
+                        <div class="prop-menu2">
+                            <p>View</p>     
+                            <i @click="showAndHideItem('list-view', 'grid-view', 'block')" class="fa fa-solid fa-list icon1"></i>
+                            <i @click="showAndHideItem('grid-view', 'list-view', 'block')" class="fa-sharp fa-solid fa-border-all icon1"></i>
+                            <p>Sort By</p>
+                            <div class="input-icons">
+                                <input class="input-field" type="text" placeholder="Search">
+                                <i class="fa fa-caret-down icon"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col2-row2">
+
+                    <div class="row2-col1">
+                        <div id="grid-view">
+                            <HousesGrid />
+                            <HousesGrid />
+                            <HousesGrid />
+                        </div>
+                        <div id="list-view">
+                            <HousesList />
+                            <HousesList />
+                            <HousesList />
+                            <HousesList />
+                            <HousesList />
+                            <HousesList />
                         </div>
                     </div>
+                    <div class="row2-col2">
+
+                        <h2>Advertisement</h2>
+
+                    </div>
 
                 </div>
+
+                <div>
+                    <button class="btn2"> Load More</button>
+                </div>
+            </div>
             
-            </div>
-            <div class="col2-row2">
-
-                <div class="row2-col1">
-                    <Houses />
-                    <Houses />
-                    <Houses />
-                </div>
-                <div class="row2-col2">
-
-                    <h2>Advertisement</h2>
-
-                </div>
-
-            </div>
-
-            <div>
-                <button class="btn2"> Load More</button>
-            </div>
         </div>
-        
+        <Footer />
     </div>
-    <Footer />
 </template>
 
 <script>
 
-    import Houses from "./Houses"
-
-    import Footer from "./Footer"
+    import HousesGrid from "./HousesGrid";
+    import HousesList from "./HousesList";
+    import Footer from "./Footer";
 
     export default {
         name: 'Properties',
         components:{
             Footer, 
-            Houses
+            HousesGrid,
+            HousesList
+        },
+        methods:{
+            showAndHideItem(currentViewId, oppositeViewId, action){
+                let currentView = document.getElementById(currentViewId);
+                let oppositeView = document.getElementById(oppositeViewId);
+                currentView.style.display = action;
+                oppositeView.style.display = "none";
+            }
         }
     }
 
@@ -91,12 +112,15 @@
 
 <style scoped>
 
+#list-view{
+    display: none;
+}
+
 .icon1{
     width: 5%;
     margin-top: 3.5%;
 }
-
-    
+ 
 .icon {
     padding:3.3%;
     background-color:rgba(98, 110, 114, 0.863);
@@ -106,7 +130,7 @@
 .prop-menu{
     display: grid;
     grid-template-columns: 40% 60%;
-    /* column-gap: 5%; */
+    column-gap: 5%;
     margin: 1% 5% 0% 5%;
     color: rgba(98, 110, 114, 0.863);
 }
@@ -126,7 +150,7 @@
     border-radius: 1%; 
     padding: 7%;
     margin: 3%;
-    margin-bottom: 85%;
+    margin-bottom: 120%;
 }
 h3, h2{
     color: rgba(98, 110, 114, 0.863);
@@ -142,7 +166,7 @@ h2{
     background-color:white;  
     border:none; 
     color:white;
-    width:61%; 
+    width:75%; 
     padding:4%;
     border-radius: 1%;
 }

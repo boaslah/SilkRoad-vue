@@ -53,7 +53,7 @@
 <script>
 
 export default{
-    name: "Houses"
+    name: "HousesGrid"
 }
 </script>
 
@@ -85,7 +85,7 @@ img{
     width: 100% !important;
 }
 .house-details{
-    margin: 5%;
+    margin: 0% 5% 5% 5%;
     margin-top: -3%;
     display: grid;
     grid-template-rows: 80% 20%;
@@ -95,7 +95,7 @@ img{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     text-align: center;
-    margin: 0% -9% -5% -9%;
+    margin: 0% -10% -6% -10%;
     padding: 3%;
     border-color: rgba(98, 110, 114, 0.863);
 }

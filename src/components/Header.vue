@@ -1,68 +1,71 @@
 <template>
 
-   <div class="page">
+    <div>
+        <div class="page">
 
-        <div class="head">
+            <div class="head">
 
-            <div class="row1">
-                <h1 class="title">SILKROAD</h1><i @click="showMenu('cover')" class="fa fa-bars icon"></i>
-            </div>
-            
-            <div class="row2">
+                <div class="row1">
+                    <h1 class="title">SILKROAD</h1><i @click="showMenu('cover')" class="fa fa-bars icon"></i>
+                </div>
+                
+                <div class="row2">
 
-                <div class="nav-links">
+                    <div class="nav-links">
 
-                    <div>
+                        <div>
 
-                        <span class="menu">
+                            <span class="menu">
 
-                            <router-link to="/" class="active">Home</router-link>  
+                                <router-link to="/" class="active">Home</router-link>  
 
-                            <router-link to="/properties-grid" class="property" >Properties</router-link>
+                                <router-link to="/properties" class="property" >Properties</router-link>
 
-                        </span>
+                            </span>
 
-                        <div class="register">
+                            <div class="register">
 
-                          <router-link to="/login">Login</router-link> |
-    
-                          <router-link to="/register">Register</router-link>
+                            <router-link to="/login">Login</router-link> |
+        
+                            <router-link to="/register">Register</router-link>
+
+                            </div>
 
                         </div>
 
                     </div>
+                    
+                    <div><hr></div>
 
-                </div>
-                
-                <div><hr></div>
+                    <div>
 
-                <div>
+                        <button>Post a Property</button>
 
-                    <button>Post a Property</button>
-
-                </div>
-                
-            </div>
-        </div>
-        <div @click="hideMenu('cover')" id="cover">
-            <div class="mobile-menu">
-                <div class="menu-div">
-                    <router-link to="/">Home</router-link>
-                </div>
-                <div class="menu-div">
-                    <router-link to="/properties-grid">Properties</router-link>
-                </div>
-                <div class="menu-div">
-                    <router-link to="/login">Login</router-link>
-                </div>
-                <div class="menu-div">
-                    <router-link to="/register">Register</router-link>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
+            <div @click="hideMenu('cover')" id="cover">
+                <div class="mobile-menu">
+                    <div class="menu-div">
+                        <router-link to="/">Home</router-link>
+                    </div>
+                    <div class="menu-div">
+                        <router-link to="/properties">Properties</router-link>
+                    </div>
+                    <div class="menu-div">
+                        <router-link to="/login">Login</router-link>
+                    </div>
+                    <div class="menu-div">
+                        <router-link to="/register">Register</router-link>
+                    </div>
+                </div>
+            </div>
 
-    </div>
-  <router-view/>
+        </div>
+    <router-view/>
+
+  </div>
 
 </template>
 
@@ -77,7 +80,7 @@
                 name.style.display = "block";   
             },
             hideMenu(id){
-                 let name = document.getElementById(id);
+                let name = document.getElementById(id);
                 name.style.display = "none";      
             }
         }

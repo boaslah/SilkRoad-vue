@@ -1,7 +1,7 @@
 <template>
-
-  <Properties/>
-
+  <div>
+    <Properties/>
+  </div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import Properties from '../components/Properties'
 
 
 export default {
-  name: 'PropertiesGrid',
+  name: 'PropertiesView',
 
   components:{
     Properties,
@@ -24,8 +24,6 @@ export default {
 </script>
 
 <style>
-
-
 
 </style>
 

@@ -10,7 +10,7 @@
                 <p style="color:white;">If you do have an account fill in the form <br>and click done to login to your account,
                 <br>else click register to register your <br>account.</p>
 
-                <button>REGISTER</button>
+                <button><router-link to="/register">REGISTER</router-link></button>
             </div>
             <div class="main2-col2">
                 <div class="login">
@@ -48,6 +48,11 @@
 </script>
 
 <style scoped>
+
+.main2-col1 a{
+    text-decoration: none;
+    color: white;
+}
 .main2-col1 button{
     border: solid;
     border-color: white;

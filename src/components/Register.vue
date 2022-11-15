@@ -31,7 +31,7 @@
 
                 <p>If you already have an account, click<br> the login button to login to your account.<br> If you don't, fill in the form to register</p>
 
-                <button>LOGIN</button>
+                <button><router-link to="/login">LOGIN</router-link></button>
             </div>
         </div>
 
@@ -59,6 +59,11 @@
     color: white;
     width: 40%;
     padding: 3%;
+}
+
+.main2-col1 a{
+    text-decoration: none;
+    color: white;
 }
 
 .input1, .input2, .input3{
