@@ -52,9 +52,9 @@
 
 <script>
 
-export default{
-    name: "HousesGrid"
-}
+    export default{
+        name: "HousesGrid"
+    }
 </script>
 
 <style scoped>

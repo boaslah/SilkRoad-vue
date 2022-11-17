@@ -17,7 +17,7 @@
 
                             <span class="menu">
 
-                                <router-link to="/" class="active">Home</router-link>  
+                                <router-link to="/" class="active" @click="showAndHideItem('main', 'widget-main', 'grid')">Home</router-link>  
 
                                 <router-link to="/properties" class="property" >Properties</router-link>
 
@@ -71,18 +71,18 @@
 
 <script>
 
-import {showAndHideItem, showMenu, hideMenu} from "../helper.js"
+    import {showAndHideItem, showMenu, hideMenu} from "../helper.js"
 
-export default {
-    name: 'Header',
-    components: {
-    },
-    methods:{
-        showAndHideItem,
-        showMenu,
-        hideMenu
+    export default {
+        name: 'Header',
+        components: {
+        },
+        methods:{
+            showMenu,
+            hideMenu,
+            showAndHideItem
+        }
     }
-}
 
 </script>
 

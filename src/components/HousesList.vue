@@ -26,9 +26,10 @@
 
 <script>
 
-export default{
-    name: "HousesList"
-}
+    export default{
+        name: "HousesList"
+    }
+    
 </script>
 
 <style scoped>
