@@ -67,6 +67,10 @@ span{
     font-size: 80%;
     margin-top: 35%;
 }
+img{
+    width: 100%;
+    /* position: absolute; */
+}
 
 .img-grid{
     display: grid;
@@ -77,13 +81,11 @@ span{
 
 .houses{
     background-color: white;
-    width: 89%;
+    width: 98%;
     border: solid 1px rgba(192, 195, 196, 0.863);
 }
 
-img{
-    width: 100% !important;
-}
+
 .house-details{
     margin: 0% 5% 5% 5%;
     margin-top: -3%;

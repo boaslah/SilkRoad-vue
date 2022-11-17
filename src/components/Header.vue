@@ -71,25 +71,24 @@
 
 <script>
 
+import {showAndHideItem, showMenu, hideMenu} from "../helper.js"
 
-    export default {
-        name: 'Header',
-        methods:{
-            showMenu(id){
-                let name = document.getElementById(id);
-                name.style.display = "block";   
-            },
-            hideMenu(id){
-                let name = document.getElementById(id);
-                name.style.display = "none";      
-            }
-        }
+export default {
+    name: 'Header',
+    components: {
+    },
+    methods:{
+        showAndHideItem,
+        showMenu,
+        hideMenu
     }
+}
 
 </script>
 
 
 <style scoped>
+
 #cover{
     display: none;
 }
@@ -101,8 +100,8 @@
 
 .head{
     display: grid;
-    grid-template-columns: 15% 85%;
-    column-gap: 5%;
+    grid-template-columns: 18% 88%;
+    column-gap: 2%;
     background-color: rgba(0, 0, 0, 0.568);
     color: white;
     padding: 3%;
@@ -128,14 +127,14 @@
 }
 
 .register{
-    margin: -2% 0% 0% 58%; 
+    margin: -2% 0% 0% 65%; 
     width:100%;
     position: fixed;
 }
 
 .row2 button{
-    margin: -1% 0% 0% 55%; 
-    padding:1%; 
+    margin: -1% 0% 0% 62%; 
+    padding:0.5%; 
     width:13%;
     border:none; 
     color:white; 
@@ -152,7 +151,9 @@
 
 .row1{
     background-color: rgb(44, 44, 44);
+    margin: 1%;
 }
+
 .row1 h1{
     text-align: center;
 }
@@ -163,7 +164,7 @@
 }
 
 hr{
-    width: 68%;
+    width: 75%;
     background-color:white;
     opacity:0.9;
     position: fixed;
@@ -177,7 +178,6 @@ hr{
         display: block;
         float: right;
     }
-
 
     #cover{  
         background-color: rgba(56, 56, 59, 0.952);

@@ -34,7 +34,7 @@ export default{
 <style scoped>
 
 .img-list{
-    margin-bottom: 3%;
+    margin: 0% -3% 3% 0%;
 }
 
 .active-back{

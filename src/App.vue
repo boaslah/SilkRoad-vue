@@ -21,6 +21,9 @@ export default {
 .active{
     color:rgb(91, 170, 170);
 }
+button:hover{
+  cursor: pointer;
+}
 body{
   font-family: 'Roboto', serif;
 }

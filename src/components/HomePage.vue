@@ -1,6 +1,6 @@
 <template>
 
-    <div class="main">
+    <div id="main">
         <div class="main1"></div>
         <div class="main2">
             <div>
@@ -24,7 +24,7 @@
 <script>
 
     export default {
-        name: 'HomePage'
+        name: 'HomePage',
     }
 
 </script>
@@ -36,7 +36,7 @@ h3 i{
     margin-top: 3%;
 }
 
-.main h1{
+#main h1{
     text-align: center;
 }
     
@@ -52,7 +52,7 @@ h3 i{
     font-size: 25px;
 }
 
-.main{
+#main{
     display: grid;
     grid-template-columns: 25% 50% 50%;
     color: white;
@@ -80,7 +80,7 @@ h3{
 
 @media only screen and (max-width: 600px) {
    
-    .main{
+    #main{
         margin: 70% 0% -40% -2%;
         display: grid;
         grid-template-columns: 5% 90% 5%;
@@ -97,7 +97,7 @@ h3{
 
 @media only screen and (max-width: 1000px) {
 
-    .main{
+    #main{
         margin: 40% 0% 0% -2%;
         display: grid;
         grid-template-columns: 5% 90% 5%;

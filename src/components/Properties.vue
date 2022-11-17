@@ -90,6 +90,8 @@
     import HousesGrid from "./HousesGrid";
     import HousesList from "./HousesList";
     import Footer from "./Footer";
+    import {showAndHideItem} from "../helper.js"
+
 
     export default {
         name: 'Properties',
@@ -99,12 +101,7 @@
             HousesList
         },
         methods:{
-            showAndHideItem(currentViewId, oppositeViewId, action){
-                let currentView = document.getElementById(currentViewId);
-                let oppositeView = document.getElementById(oppositeViewId);
-                currentView.style.display = action;
-                oppositeView.style.display = "none";
-            }
+            showAndHideItem
         }
     }
 
@@ -112,25 +109,27 @@
 
 <style scoped>
 
+
 #list-view{
     display: none;
 }
 
 .icon1{
     width: 5%;
-    margin-top: 3.5%;
+    margin-top: 2%;
+    font-size: 30px;
 }
  
 .icon {
     padding:3.3%;
     background-color:rgba(98, 110, 114, 0.863);
     color: black;
+
 }
 
 .prop-menu{
     display: grid;
-    grid-template-columns: 40% 60%;
-    column-gap: 5%;
+    grid-template-columns: 60% 40%;
     margin: 1% 5% 0% 5%;
     color: rgba(98, 110, 114, 0.863);
 }
@@ -141,16 +140,15 @@
 
 .properties-main{
     display: grid;
-    grid-template-columns: 22% 78%;
-    margin: 10% 10% 0% 1%;
+    grid-template-columns: 20% 80%;
+    margin: 10% 2% 0% 1%;
 }
 
 .col1{
     background-color:rgb(209, 215, 223);
     border-radius: 1%; 
     padding: 7%;
-    margin: 3%;
-    margin-bottom: 120%;
+    margin: 3% 5% 170% 3%;
 }
 h3, h2{
     color: rgba(98, 110, 114, 0.863);
@@ -199,29 +197,28 @@ h2{
 
 .col2-row1{
     background-color:rgb(214, 214, 214);
-    margin: 1%;
+    margin-top: 1%;
+    border-radius: 2%;
 }
 .col2-row2{
     display: grid;
     grid-template-columns: 75% 25%;
-    margin: 1%;
+    margin-top: 1%;
 }
 .col2{
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 8% 92%;
 }
 
 .row2-col1{
     display: grid;
     grid-template-rows: 33% 33% 33%;
 }
-.row2-col1 img{
-    width: 90%;
-}
 
 .row2-col2{
     background-color: white;
     margin-bottom: 85%;
+    margin-left: 7%;
 }
 
 @media only screen and (max-width: 600px) {
