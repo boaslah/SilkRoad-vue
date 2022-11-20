@@ -22,5 +22,5 @@ function hideMenu(id){
 export{
     showAndHideItem,
     hideMenu,
-    showMenu
+    showMenu,
 }

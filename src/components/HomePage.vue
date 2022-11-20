@@ -89,7 +89,7 @@
                     <div  class="center-box-row5">
                         <div>
                             <div>Price   $00.00-$10,000.00</div>
-                            <div><input type="range" name="" id="range" class="active"></div>
+                            <div><input type="range" name=""></div>
                         </div>
                         <div>
                             <button>Find it</button>
@@ -120,6 +120,24 @@
 </script>
 
 <style scoped>
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgb(91, 170, 170);
+  border-radius: 5px;
+  background-image: linear-gradient(rgb(91, 170, 170), rgb(91, 170, 170));
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(91, 170, 170);
+  cursor: ew-resize; 
+}
 
 .center-box-row1-navs{
     display: grid;

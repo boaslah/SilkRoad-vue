@@ -1,48 +1,18 @@
 <template>
     <div>
-        <div class="img-grid">
-            <div class="houses">
-                <img src="../assets/grid1-mobile.jpg" alt="houses">
+        <div class="img-grid" >
+            <div class="houses" v-for="house in houseData">
+                <img src="../assets/list1.jpg" alt="houses">
                 <div class="house-details">
                     <div>
-                        <p>3 bedroom Townhouse</p>
-                        <span><i class="fa-sharp fa-solid fa-location-pin active"></i> 45 Circle Dr, Monrovia, Liberia</span><br>
-                        <span>Peter Wayne</span>
+                        <p>{{house.houseDes}}</p>
+                        <span><i class="fa-sharp fa-solid fa-location-pin active"></i>  {{house.houseLoc}}</span><br>
+                        <span>{{house.houseOwner}}</span>
                     </div>
                     <div class="house-details-numbers">
-                        <div class="border-right"> <i class="fa fa-triangle-exclamation active"></i> 2</div>
-                        <div class="border-right"><i class="fa fa-book active"></i> 3</div>
-                        <div><i class="fa fa-computer active"></i> 4</div>
-                    </div>
-                </div>
-            </div>
-            <div class="houses">
-                <img src="../assets/grid1-mobile.jpg" alt="houses">
-                <div class="house-details">
-                     <div>
-                        <p>3 bedroom Townhouse</p>
-                        <span><i class="fa-sharp fa-solid fa-location-pin active"></i> 45 Circle Dr, Monrovia, Liberia</span><br>
-                        <span>Peter Wayne</span>
-                    </div>
-                    <div class="house-details-numbers">
-                        <div class="border-right"> <i class="fa fa-triangle-exclamation active"></i> 2</div>
-                        <div class="border-right"><i class="fa fa-book active"></i> 3</div>
-                        <div><i class="fa fa-computer active"></i> 4</div>
-                    </div>
-                </div>
-            </div>
-            <div class="houses">
-                <img src="../assets/grid1-mobile.jpg" alt="houses">
-                <div class="house-details">
-                     <div>
-                        <p>3 bedroom Townhouse</p>
-                        <span><i class="fa-sharp fa-solid fa-location-pin active"></i> 45 Circle Dr, Monrovia, Liberia</span><br>
-                        <span>Peter Wayne</span>
-                    </div>
-                    <div class="house-details-numbers">
-                        <div class="border-right"> <i class="fa fa-triangle-exclamation active"></i> 2</div>
-                        <div class="border-right"><i class="fa fa-book active"></i> 3</div>
-                        <div><i class="fa fa-computer active"></i> 4</div>
+                        <div class="border-right"> <i class="fa fa-triangle-exclamation active"></i> {{house.checkIns}}</div>
+                        <div class="border-right"><i class="fa fa-book active"></i> {{house.beds}}</div>
+                        <div><i class="fa fa-computer active"></i> {{house.TV}}</div>
                     </div>
                 </div>
             </div>
@@ -52,8 +22,17 @@
 
 <script>
 
+    import data from "./../data.json"
+
     export default{
-        name: "HousesGrid"
+        name: "HousesGrid",
+        data(){
+            // console.log("1", data.HousesData);
+            return{
+                houseData: data.HousesData
+            }
+            
+        }
     }
 </script>
 

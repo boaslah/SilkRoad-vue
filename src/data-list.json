@@ -1,0 +1,73 @@
+{
+   "HousesData": [
+        {
+            "houseImage": "./assets/list1.jpg",
+            "houseDes": "3 Bedroom Townhouse",
+            "houseLoc": "Du-port Road, Monrovia, Liberia",
+            "houseOwner":"Peter Dennis",
+            "beds": 2,
+            "TV": 3,
+            "light": 5,
+            "checkIns": 1,
+            "price": "$500.00/month"
+
+        },
+        {
+            "houseImage": "../assets/list1.jpg",
+            "houseDes": "6 Bedroom Townhouse",
+            "houseLoc": "GSA Road, Monrovia, Liberia",
+            "houseOwner":"Ben Morris",
+            "beds": 5,
+            "TV": 3,
+            "light": 4,
+            "checkIns": 1,
+            "price": "$400.00/month"
+        },
+        {
+            "houseImage": "../assets/list1.jpg",
+            "houseDes": "5 Bedroom Townhouse",
+            "houseLoc": "8th St. Sinkor., Monrovia, Liberia",
+            "houseOwner":"Alvis Dahn",
+            "beds": 4,
+            "TV": 2,
+            "light": 7,
+            "checkIns": 8,
+            "price": "$900.00/month"
+
+        },
+        {
+            "houseImage": "../assets/list1.jpg",
+            "houseDes": "4 Bedroom Townhouse",
+            "houseLoc": "Airfield Sinkor, Monrovia, Liberia",
+            "houseOwner":"James Brown",
+            "beds": 10,
+            "TV": 4,
+            "light": 2,
+            "checkIns": 3,
+            "price": "$800.00/month"
+        },
+        {
+            "houseImage": "../assets/list1.jpg",
+            "houseDes": "1 Bedroom Townhouse",
+            "houseLoc": "Thinkers Village, Monrovia, Liberia",
+            "houseOwner":"Albin Peters",
+            "beds": 4,
+            "TV": 3,
+            "light": 1,
+            "checkIns": 2,
+            "price": "$600.00/month"
+
+        },
+        {
+            "houseImage": "../assets/list1.jpg",
+            "houseDes": "10 Bedroom Townhouse",
+            "houseLoc": "Supper Market, Monrovia, Liberia",
+            "houseOwner":"Carlos Mator",
+            "beds": 4,
+            "TV": 3,
+            "light": 4,
+            "checkIns": 5,
+            "price": "$700.00/month"
+        }
+   ] 
+}

@@ -23,7 +23,7 @@
                     <i class="fa fa-caret-down icon"></i>
                     <div>
                         <h3>Price   $00.00-$10,000.00</h3>
-                        <input type="range" value="50">
+                        <input type="range" name="">
                     </div>
                     <button>Done</button>
                 </div>
@@ -55,15 +55,8 @@
                     <div class="row2-col1">
                         <div id="grid-view">
                             <HousesGrid />
-                            <HousesGrid />
-                            <HousesGrid />
                         </div>
                         <div id="list-view">
-                            <HousesList />
-                            <HousesList />
-                            <HousesList />
-                            <HousesList />
-                            <HousesList />
                             <HousesList />
                         </div>
                     </div>
@@ -110,6 +103,7 @@
 <style scoped>
 
 
+
 #list-view{
     display: none;
 }
@@ -124,12 +118,11 @@
     padding:3.3%;
     background-color:rgba(98, 110, 114, 0.863);
     color: black;
-
 }
 
 .prop-menu{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     margin: 1% 5% 0% 5%;
     color: rgba(98, 110, 114, 0.863);
 }
@@ -150,6 +143,7 @@
     padding: 7%;
     margin: 3% 5% 170% 3%;
 }
+
 h3, h2{
     color: rgba(98, 110, 114, 0.863);
 }
@@ -173,7 +167,6 @@ h2{
     padding: 4%;
     width: 80%;
     margin: 4% 0% 5% 0%;
-
 }
 .col1 button{
     background-color: rgba(98, 110, 114, 0.863);

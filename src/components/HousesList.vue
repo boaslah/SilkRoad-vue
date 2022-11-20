@@ -1,22 +1,22 @@
 <template>
     <div>
         <div class="img-list">
-            <div class="houses">
+            <div class="houses" v-for="house in houseData">
                 <div>
                     <img src="../assets/list1.jpg" alt="houses">
                 </div>
                 <div class="house-details">
                     <div>
                         <div class="price">
-                            <p>3 bedroom Townhouse</p><span class="active-back">$500.00/month</span>
+                            <p>{{house.houseDes}}</p><span class="active-back">{{house.price}}</span>
                         </div>
-                        <span><i class="fa-sharp fa-solid fa-location-pin active"></i> 45 Circle Dr, Monrovia, Liberia</span><br>
-                        <span>Peter Wayne</span>
+                        <span><i class="fa-sharp fa-solid fa-location-pin active"></i>  {{house.houseLoc}}</span><br>
+                        <span>{{house.houseOwner}}</span>
                     </div>
                     <div class="house-details-numbers">
-                        <div class="border-right border-left"> <i class="fa fa-triangle-exclamation active"></i> 2</div>
-                        <div class="border-right"><i class="fa fa-book active"></i> 3</div>
-                        <div class="border-right"><i class="fa fa-computer active"></i> 4</div>
+                        <div class="border-right border-left"> <i class="fa fa-triangle-exclamation active"></i> {{house.checkIns}}</div>
+                        <div class="border-right"><i class="fa fa-book active"></i> {{house.beds}}</div>
+                        <div class="border-right"><i class="fa fa-computer active"></i> {{house.TV}}</div>
                     </div>
                 </div>
             </div>
@@ -26,8 +26,18 @@
 
 <script>
 
+    import data from "./../data-list.json"
+
+
+
     export default{
-        name: "HousesList"
+        name: "HousesList",
+        data(){
+            return{
+                houseData: data.HousesData
+            }
+            
+        }
     }
     
 </script>
