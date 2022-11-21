@@ -127,9 +127,10 @@
 }
 
 .register{
-    margin: -2% 0% 0% 65%; 
-    width:100%;
-    position: fixed;
+    text-align: right;
+    /* background-color: gray; */
+    margin: -2% 0% 0% 0%; 
+    width:85%;
 }
 
 .row2 button{
@@ -236,7 +237,8 @@ hr{
         width: 93.5%;
     }
     .register{
-        margin: -3% 0% 0% 78%; 
+        /* margin: 0% 0% 0% 0%;  */
+        width: 94%;
     }
     .row2 button{
         margin: -1% 0% 0% 74%; 

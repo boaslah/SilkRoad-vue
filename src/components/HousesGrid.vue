@@ -27,7 +27,6 @@
     export default{
         name: "HousesGrid",
         data(){
-            // console.log("1", data.HousesData);
             return{
                 houseData: data.HousesData
             }
@@ -61,6 +60,7 @@ img{
 .houses{
     background-color: white;
     width: 98%;
+    margin-bottom: 5%;
     border: solid 1px rgba(192, 195, 196, 0.863);
 }
 

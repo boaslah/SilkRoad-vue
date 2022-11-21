@@ -134,7 +134,7 @@
 .properties-main{
     display: grid;
     grid-template-columns: 20% 80%;
-    margin: 10% 2% 0% 1%;
+    margin: 10% 3% 0% 2%;
 }
 
 .col1{

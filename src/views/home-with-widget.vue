@@ -1,6 +1,5 @@
 <template>
     
-
   <HomePage/>
 
 </template>
