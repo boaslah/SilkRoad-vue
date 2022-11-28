@@ -7,7 +7,7 @@
 
                 <div class="side-nav">
                     <h3>Search</h3>
-                    <input class="search-input" type="text" placeholder="Search                                 &#61447;"/>
+                    <input class="search-input" type="text" placeholder="Search                                &#x1F50D;"/>
                     <h3>Category</h3>
                     <select class="select-arrow filter-select" name="category" id="category">
                         <option value="Rooms"></option>
