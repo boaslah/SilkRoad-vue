@@ -12,7 +12,8 @@
                     <div class="house-details-numbers">
                         <div class="border-right"> <i class="fa fa-triangle-exclamation active"></i> {{house.checkIns}}</div>
                         <div class="border-right"><i class="fa fa-book active"></i> {{house.beds}}</div>
-                        <div><i class="fa fa-computer active"></i> {{house.TV}}</div>
+                        <div class="border-right"><i class="fa fa-computer active"></i> {{house.TV}}</div>
+                        <div><i class="fa fa-lightbulb active"></i> {{house.light}}</div>
                     </div>
                 </div>
             </div>
@@ -74,7 +75,7 @@ img{
 }
 .house-details-numbers{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
     margin: 0% -10% -6% -10%;
     padding: 3%;

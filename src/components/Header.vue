@@ -17,17 +17,17 @@
 
                             <span class="menu">
 
-                                <router-link to="/" class="active" @click="showAndHideItem('main', 'widget-main', 'grid')">Home</router-link>  
+                                <router-link to="/" @click="showAndHideItem('main', 'widget-main', 'grid')" class="color-white">Home</router-link>  
 
-                                <router-link to="/properties" class="property" >Properties</router-link>
+                                <router-link to="/properties" class="property color-white" @click="breadCrumb('HOUSES')" id="HOUSES">Properties</router-link>
 
                             </span>
 
                             <div class="register">
 
-                            <router-link to="/login">Login</router-link> |
+                            <router-link to="/login" @click="breadCrumb('LOGIN')" id="LOGIN" class="color-white">Login</router-link> |
         
-                            <router-link to="/register">Register</router-link>
+                            <router-link to="/register" @click="breadCrumb('REGISTER')" id="REGISTER"  class="color-white">Register</router-link>
 
                             </div>
 
@@ -37,9 +37,20 @@
                     
                     <div><hr></div>
 
-                    <div>
+                    <div class="header-second-row">
 
-                        <button>Post a Property</button>
+                        <div class="bread-crumb">
+
+                            <router-link to="/login" class="color-gray">HOME</router-link>
+                        
+                            <i class="fa-regular fa-greater-than"></i>
+        
+                            <router-link to="/register" class="color-white"><strong>{{menu}}</strong></router-link>
+                        </div>
+
+                        <div class="button-right">
+                            <button>Post a Property</button>
+                        </div>
 
                     </div>
                     
@@ -48,16 +59,16 @@
             <div @click="hideMenu('cover')" id="cover">
                 <div class="mobile-menu">
                     <div class="menu-div">
-                        <router-link to="/">Home</router-link>
+                        <router-link to="/" class="color-white">Home</router-link>
                     </div>
                     <div class="menu-div">
-                        <router-link to="/properties">Properties</router-link>
+                        <router-link to="/properties" class="color-white">Properties</router-link>
                     </div>
                     <div class="menu-div">
-                        <router-link to="/login">Login</router-link>
+                        <router-link to="/login" class="color-white">Login</router-link>
                     </div>
                     <div class="menu-div">
-                        <router-link to="/register">Register</router-link>
+                        <router-link to="/register" class="color-white">Register</router-link>
                     </div>
                 </div>
             </div>
@@ -77,11 +88,21 @@
         name: 'Header',
         components: {
         },
+        data(){
+            return {
+                menu: ''
+            }
+        },
         methods:{
             showMenu,
             hideMenu,
-            showAndHideItem
-        }
+            showAndHideItem,
+            breadCrumb(id){
+                this.menu = id;
+                document.getElementById(id).style.color ='rgb(91, 170, 170)';
+                document.getElementsByTagName('a').style.color='white';
+            }
+        },
     }
 
 </script>
@@ -89,6 +110,23 @@
 
 <style scoped>
 
+.button-right{
+    text-align: right;
+}
+.bread-crumb{
+    font-size: 70%;
+    text-decoration: solid;
+}
+.color-white{
+    color: white;
+}
+.color-gray{
+    color: gray;
+}
+.bread-crumb i{
+    margin: 0% 2% 0% 2%;
+    font-size: 60%;
+}
 #cover{
     display: none;
 }
@@ -117,7 +155,6 @@
 
 .row2 a{
     text-decoration: none;
-    color: white;
 }
 .nav-links{
     margin-top: 18px;
@@ -128,20 +165,26 @@
 
 .register{
     text-align: right;
-    /* background-color: gray; */
     margin: -2% 0% 0% 0%; 
     width:85%;
 }
 
+.header-second-row{
+    /* background-color: red; */
+    display: grid;
+    width:85%;
+    grid-template-columns: 50% 50%;
+    margin: -1% 0% 0% 0%; 
+    font-size: 90%;
+}
 .row2 button{
-    margin: -1% 0% 0% 62%; 
-    padding:0.5%; 
-    width:13%;
+    margin: -2% 0% 0% 0%; 
+    padding:1.2%; 
+    width:40%;
     border:none; 
     color:white; 
     background-color: rgb(39, 135, 214); 
     border-radius:5%;
-    position: fixed;
     font-size: 1.0rem;
 }
 
@@ -240,9 +283,13 @@ hr{
         /* margin: 0% 0% 0% 0%;  */
         width: 94%;
     }
+    .header-second-row{
+        width: 90%;
+        margin: -2% 0% 0% 0%; 
+    }
     .row2 button{
         margin: -1% 0% 0% 74%; 
-        width: 20%;
+        width: 35%;
     }
 }
 </style>

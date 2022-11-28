@@ -5,24 +5,28 @@
 
             <div class="col1">
 
-                <div class="side-nav input-icons">
+                <div class="side-nav">
                     <h3>Search</h3>
-                    <input class="input-field" type="text" placeholder="Most Recent">
-                    <i class="fa fa-caret-down icon"></i>
+                    <input class="search-input" type="text" placeholder="Search                                 &#61447;"/>
                     <h3>Category</h3>
-                    <input class="input-field" type="text" placeholder="Most Recent">
-                    <i class="fa fa-caret-down icon"></i>
+                    <select class="select-arrow filter-select" name="category" id="category">
+                        <option value="Rooms"></option>
+                        <option value="Rooms"></option>
+                    </select>
                     <h3>Location</h3>
-                    <input class="input-field" type="text" placeholder="Most Recent">
-                    <i class="fa fa-caret-down icon"></i>
+                    <select class="select-arrow filter-select"  name="location" id="">
+                        <option value="Rooms"></option>
+                    </select>
                     <h3>Bedrooms</h3>
-                    <input class="input-field" type="text" placeholder="Most Recent">
-                    <i class="fa fa-caret-down icon"></i>
+                   <select class="select-arrow filter-select"  name="bedrooms" id="">
+                        <option value="Rooms"></option>
+                    </select>
                     <h3>Bathrooms</h3>
-                    <input class="input-field" type="text" placeholder="Most Recent">
-                    <i class="fa fa-caret-down icon"></i>
+                    <select class="select-arrow filter-select"  name="category" id="">
+                        <option value="Rooms"></option>
+                    </select>
                     <div>
-                        <h3>Price   $00.00-$10,000.00</h3>
+                        <p>Price      $00.00-$10,000.00</p>
                         <input type="range" name="">
                     </div>
                     <button>Done</button>
@@ -41,9 +45,10 @@
                             <i @click="showAndHideItem('list-view', 'grid-view', 'block')" class="fa fa-solid fa-list icon1"></i>
                             <i @click="showAndHideItem('grid-view', 'list-view', 'block')" class="fa-sharp fa-solid fa-border-all icon1"></i>
                             <p>Sort By</p>
-                            <div class="input-icons">
-                                <input class="input-field" type="text" placeholder="Search">
-                                <i class="fa fa-caret-down icon"></i>
+                            <div>
+                                <select class="select-arrow search-select" name="" id="">
+                                    <option value="Rooms"></option>
+                                </select>
                             </div>
                         </div>
 
@@ -102,7 +107,65 @@
 
 <style scoped>
 
+select.search-select{
+    width: 230px;
+    border: none;
+    appearance: none;
+    padding: 4% 0% 3% 0%;
+    border-radius: 1px;
+    margin-top: 3%;
+    font: inherit;
+}
 
+select.filter-select{
+    width: 100%;
+    border: none;
+    appearance: none;
+    padding: 4% 0% 3% 0%;
+    border-radius: 1px;
+    font: inherit;
+}
+
+select.select-arrow {
+  background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, rgba(98, 110, 114, 0.863), rgba(98, 110, 114, 0.863));
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    3px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+input::placeholder { font-family: 'FontAwesome'; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-bottom: 10%;
+  width: 98%;
+  height: 7px;
+  background: rgb(91, 170, 170);
+  border-radius: 5px;
+  background-image: linear-gradient(rgb(91, 170, 170), rgb(91, 170, 170));
+}
+
+.search-input::placeholder{
+    color: white !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(91, 170, 170);
+  cursor: ew-resize; 
+}
 
 #list-view{
     display: none;
@@ -112,12 +175,6 @@
     width: 5%;
     margin-top: 2%;
     font-size: 30px;
-}
- 
-.icon {
-    padding:3.3%;
-    background-color:rgba(98, 110, 114, 0.863);
-    color: black;
 }
 
 .prop-menu{
@@ -137,14 +194,21 @@
     margin: 10% 3% 0% 2%;
 }
 
+.col1 p{
+    color: rgba(98, 110, 114, 0.863);
+    margin-bottom: -1%;
+    font-size: 90%;
+}
+
 .col1{
     background-color:rgb(209, 215, 223);
     border-radius: 1%; 
     padding: 7%;
-    margin: 3% 5% 170% 3%;
+    margin: 3% 5% 0% 3%;
+    height: 55%;
 }
 
-h3, h2{
+h2, h3{
     color: rgba(98, 110, 114, 0.863);
 }
 h2{
@@ -154,26 +218,22 @@ h2{
     height: 70vh;
     display: flex;
 }
-.col1 input{
-    background-color:white;  
+
+.col1 .search-input{
+    background-color: rgb(85, 84, 84);
     border:none; 
     color:white;
-    width:75%; 
+    width:92%; 
     padding:4%;
     border-radius: 1%;
 }
-.col2-row1 input{
-    border: none;
-    padding: 4%;
-    width: 80%;
-    margin: 4% 0% 5% 0%;
-}
+
 .col1 button{
     background-color: rgba(98, 110, 114, 0.863);
     border: none;
-    width: 93%;
+    width: 100%;
     border-radius: 5%;
-    padding: 5%;
+    padding: 4%;
     color: white;
     font-size: 1rem;
 }
@@ -185,13 +245,14 @@ h2{
     justify-content: center;
     width: 20%;
     padding: 1%;
-    margin: 2% 0% 0% 27%;
+    margin: -10% 0% 0% 27%;
 }
 
 .col2-row1{
     background-color:rgb(214, 214, 214);
     margin-top: 1%;
     border-radius: 2%;
+    padding: 0.1% 0.2% 1% 0.2%;
 }
 .col2-row2{
     display: grid;
@@ -199,8 +260,9 @@ h2{
     margin-top: 1%;
 }
 .col2{
-    display: grid;
-    grid-template-rows: 8% 92%;
+    /* display: grid;
+    grid-template-rows: 8% 92%; */
+    
 }
 
 .row2-col1{
