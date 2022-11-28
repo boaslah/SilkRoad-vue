@@ -130,6 +130,7 @@ select.filter-select{
     padding: 4% 0% 3% 0%;
     border-radius: 1px;
     font: inherit;
+    margin-bottom: 5%;
 }
 
 select.select-arrow {
@@ -217,6 +218,10 @@ input[type="range"]::-webkit-slider-thumb {
 h2, h3{
     color: rgba(98, 110, 114, 0.863);
 }
+h3{
+    margin-bottom: 7%;
+    font-size: 100%;
+}
 h2{
     justify-content: center;
     text-align: center;
@@ -232,6 +237,7 @@ h2{
     width:92%; 
     padding:4%;
     border-radius: 1%;
+    margin-bottom: 10%;
 }
 
 .col1 button{
