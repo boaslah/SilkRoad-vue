@@ -36,15 +36,16 @@
                 <div class="col2-row1">
                     <div class="prop-menu">
                         <div class="prop-menu1">
-                            <p class="active">All</p>
-                            <p>Recent</p>
-                            <p>Sale</p>
+                            <strong><p class="active">All</p></strong>
+                            <strong><p>Recent</p></strong>
+                            <strong><p>Sale</p></strong>
                         </div>
                         <div class="prop-menu2">
                             <p>View</p>     
-                            <i @click="showAndHideItem('list-view', 'grid-view', 'block')" class="fa fa-solid fa-list icon1"></i>
+                            <i @click="showAndHideItem('list-view', 'grid-view', 'block')" class="fa-solid fa-bars icon1"></i>
                             <i @click="showAndHideItem('grid-view', 'list-view', 'block')" class="fa-sharp fa-solid fa-border-all icon1"></i>
-                            <p>Sort By</p>
+                            
+                            <strong><p>Sort By</p></strong>
                             <div>
                                 <select class="select-arrow search-select option-text" name="" id="">
                                     <option value="Rooms">Most Recent</option>
@@ -106,6 +107,10 @@
 </script>
 
 <style scoped>
+
+.fa-sharp{
+    margin-right: 10%;
+}
 
 .option-text{
     padding-left: 5% !important;
@@ -179,15 +184,16 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .icon1{
-    width: 5%;
     margin-top: 2%;
     font-size: 30px;
+    margin-left: -3%;
 }
 
 .prop-menu{
     display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 1% 5% 0% 5%;
+    width: 100%;
+    grid-template-columns: 45% 55%;
+    margin: 1% 0% 0% 5%;
     color: rgba(98, 110, 114, 0.863);
 }
 .prop-menu1, .prop-menu2{
@@ -264,7 +270,7 @@ h2{
     background-color:rgb(214, 214, 214);
     margin-top: 1%;
     border-radius: 2%;
-    padding: 0.1% 0.2% 1% 0.2%;
+    padding: 0.1% 10% 1% 0.2%;
 }
 .col2-row2{
     display: grid;

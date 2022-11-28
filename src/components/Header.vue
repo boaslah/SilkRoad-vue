@@ -19,15 +19,15 @@
 
                                 <router-link to="/" @click="showAndHideItem('main', 'widget-main', 'grid')" class="color-white">Home</router-link>  
 
-                                <router-link to="/properties" class="property color-white" @click="breadCrumb('HOUSES')" id="HOUSES">Properties</router-link>
+                                <router-link to="/properties" class="property color-white" @click="breadCrumb('HOUSES')">Our Properties</router-link>
 
                             </span>
 
                             <div class="register">
 
-                            <router-link to="/login" @click="breadCrumb('LOGIN')" id="LOGIN" class="color-white">Login</router-link> |
+                            <router-link to="/login" @click="breadCrumb('LOGIN')" class="color-white">Login</router-link> |
         
-                            <router-link to="/register" @click="breadCrumb('REGISTER')" id="REGISTER"  class="color-white">Register</router-link>
+                            <router-link to="/register" @click="breadCrumb('REGISTER')"  class="color-white">Register</router-link>
 
                             </div>
 
@@ -62,7 +62,7 @@
                         <router-link to="/" class="color-white">Home</router-link>
                     </div>
                     <div class="menu-div">
-                        <router-link to="/properties" class="color-white">Properties</router-link>
+                        <router-link to="/properties" class="color-white">Our Properties</router-link>
                     </div>
                     <div class="menu-div">
                         <router-link to="/login" class="color-white">Login</router-link>
@@ -90,17 +90,16 @@
         },
         data(){
             return {
-                menu: ''
+                menu: '',
+                isActive: true
             }
         },
         methods:{
             showMenu,
             hideMenu,
             showAndHideItem,
-            breadCrumb(id){
-                this.menu = id;
-                document.getElementById(id).style.color ='rgb(91, 170, 170)';
-                document.getElementsByTagName('a').style.color='white';
+            breadCrumb(menu){
+                this.menu = menu;
             }
         },
     }
@@ -114,7 +113,7 @@
     text-align: right;
 }
 .bread-crumb{
-    font-size: 70%;
+    font-size: 85%;
     text-decoration: solid;
 }
 .color-white{
@@ -124,7 +123,7 @@
     color: gray;
 }
 .bread-crumb i{
-    margin: 0% 2% 0% 2%;
+    margin: 0% 4% 0% 4%;
     font-size: 60%;
 }
 #cover{
@@ -155,6 +154,7 @@
 
 .row2 a{
     text-decoration: none;
+    font-size: 80%;
 }
 .nav-links{
     margin-top: 18px;
@@ -170,7 +170,6 @@
 }
 
 .header-second-row{
-    /* background-color: red; */
     display: grid;
     width:85%;
     grid-template-columns: 50% 50%;
@@ -180,11 +179,11 @@
 .row2 button{
     margin: -2% 0% 0% 0%; 
     padding:1.2%; 
-    width:40%;
+    width:35%;
     border:none; 
     color:white; 
     background-color: rgb(39, 135, 214); 
-    border-radius:5%;
+    border-radius:5px;
     font-size: 1.0rem;
 }
 

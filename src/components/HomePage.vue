@@ -120,6 +120,11 @@
 </script>
 
 <style scoped>
+
+.bread-crumb{
+    /* background-color: ; */
+    display: none;
+}
 input[type="range"] {
   -webkit-appearance: none;
   margin-right: 15px;
