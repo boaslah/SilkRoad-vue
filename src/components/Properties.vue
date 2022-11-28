@@ -9,21 +9,21 @@
                     <h3>Search</h3>
                     <input class="search-input" type="text" placeholder="Search                                &#x1F50D;"/>
                     <h3>Category</h3>
-                    <select class="select-arrow filter-select" name="category" id="category">
-                        <option value="Rooms"></option>
+                    <select class="select-arrow filter-select option-text" name="category" id="category">
+                        <option value="Rooms">Most Recent</option>
                         <option value="Rooms"></option>
                     </select>
                     <h3>Location</h3>
-                    <select class="select-arrow filter-select"  name="location" id="">
-                        <option value="Rooms"></option>
+                    <select class="select-arrow filter-select option-text"  name="location" id="">
+                        <option value="Rooms">Most Recent</option>
                     </select>
                     <h3>Bedrooms</h3>
-                   <select class="select-arrow filter-select"  name="bedrooms" id="">
-                        <option value="Rooms"></option>
+                   <select class="select-arrow filter-select option-text"  name="bedrooms" id="">
+                        <option value="Rooms">Most Recent</option>
                     </select>
                     <h3>Bathrooms</h3>
-                    <select class="select-arrow filter-select"  name="category" id="">
-                        <option value="Rooms"></option>
+                    <select class="select-arrow filter-select option-text"  name="category" id="">
+                        <option value="Rooms">Most Recent</option>
                     </select>
                     <div>
                         <p>Price      $00.00-$10,000.00</p>
@@ -46,8 +46,8 @@
                             <i @click="showAndHideItem('grid-view', 'list-view', 'block')" class="fa-sharp fa-solid fa-border-all icon1"></i>
                             <p>Sort By</p>
                             <div>
-                                <select class="select-arrow search-select" name="" id="">
-                                    <option value="Rooms"></option>
+                                <select class="select-arrow search-select option-text" name="" id="">
+                                    <option value="Rooms">Most Recent</option>
                                 </select>
                             </div>
                         </div>
@@ -106,6 +106,12 @@
 </script>
 
 <style scoped>
+
+.option-text{
+    padding-left: 5% !important;
+    color: rgba(98, 110, 114, 0.863);
+    font-size: 90% !important;
+}
 
 select.search-select{
     width: 230px;
