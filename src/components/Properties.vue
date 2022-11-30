@@ -160,7 +160,7 @@ input[type="range"] {
   -webkit-appearance: none;
   margin-bottom: 10%;
   width: 98%;
-  height: 7px;
+  height: 3px;
   background: rgb(91, 170, 170);
   border-radius: 5px;
   background-image: linear-gradient(rgb(91, 170, 170), rgb(91, 170, 170));
@@ -172,8 +172,8 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background: rgb(91, 170, 170);
   cursor: ew-resize; 
@@ -258,12 +258,12 @@ h2{
 .btn2{
     background-color: rgba(98, 110, 114, 0.863);
     border: none;
-    border-radius: 5%;
+    border-radius: 5px;
     color: white;
     justify-content: center;
-    width: 20%;
+    width: 25%;
     padding: 1%;
-    margin: -10% 0% 0% 27%;
+    margin: -10% 0% 0% 25.5%;
 }
 
 .col2-row1{

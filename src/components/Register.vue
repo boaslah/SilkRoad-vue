@@ -54,7 +54,7 @@
 .main2-col1 button{
     border: solid;
     border-color: white;
-    border-radius: 5%;
+    border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.568);
     color: white;
     width: 40%;
@@ -97,7 +97,7 @@
     color: white;
     border: none;
     padding: 3%;
-    border-radius: 5%;
+    border-radius: 5px;
     width: 70%;
     display: block;
     float: right;

@@ -128,8 +128,8 @@
 input[type="range"] {
   -webkit-appearance: none;
   margin-right: 15px;
-  width: 200px;
-  height: 7px;
+  width: 100px;
+  height: 3px;
   background: rgb(91, 170, 170);
   border-radius: 5px;
   background-image: linear-gradient(rgb(91, 170, 170), rgb(91, 170, 170));
@@ -137,8 +137,8 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background: rgb(91, 170, 170);
   cursor: ew-resize; 
