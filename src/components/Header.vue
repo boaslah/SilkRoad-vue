@@ -5,9 +5,13 @@
 
             <div class="head">
 
+                <div></div>
+
                 <div class="row1">
                     <h1 class="title">SILKROAD</h1><i @click="showMenu('cover')" class="fa fa-bars icon"></i>
                 </div>
+
+                <!-- <div></div> -->
                 
                 <div class="row2">
 
@@ -17,9 +21,9 @@
 
                             <span class="menu">
 
-                                <router-link to="/" @click="showAndHideItem('main', 'widget-main', 'grid')" class="color-white">Home</router-link>  
+                                <router-link to="/" @click="toggleMenu(), showAndHideItem('main', 'widget-main', 'grid')" :class="{active: isActive, 'color-white': notActive}">Home</router-link>  
 
-                                <router-link to="/properties" class="property color-white" @click="breadCrumb('HOUSES')">Our Properties</router-link>
+                                <router-link to="/properties" class="property" @click="toggleMenu(), breadCrumb('HOUSES')" :class="{active: isActive, 'color-white': notActive}">Our Properties</router-link>
 
                             </span>
 
@@ -41,11 +45,11 @@
 
                         <div class="bread-crumb">
 
-                            <router-link to="/login" class="color-gray">HOME</router-link>
+                            <router-link to="/" class="color-gray">HOME</router-link>
                         
                             <i class="fa-regular fa-greater-than"></i>
         
-                            <router-link to="/register" class="color-white"><strong>{{menu}}</strong></router-link>
+                            <router-link to="/" class="color-white"><strong>{{menu}}</strong></router-link>
                         </div>
 
                         <div class="button-right">
@@ -91,7 +95,8 @@
         data(){
             return {
                 menu: '',
-                isActive: true
+                isActive: false,
+                notActive: true
             }
         },
         methods:{
@@ -100,6 +105,11 @@
             showAndHideItem,
             breadCrumb(menu){
                 this.menu = menu;
+            },
+            toggleMenu(){
+                this.isActive = !this.isActive;
+                this.notActive = !this.notActive;
+                console.log(this.isActive);
             }
         },
     }
@@ -137,8 +147,8 @@
 
 .head{
     display: grid;
-    grid-template-columns: 18% 88%;
-    column-gap: 2%;
+    grid-template-columns: 0% 14% 88%;
+    column-gap: 3%;
     background-color: rgba(0, 0, 0, 0.568);
     color: white;
     padding: 3%;
@@ -189,16 +199,18 @@
 
 .property{
     margin: 0% 0% 0% 2%; 
-    position: fixed;
+    /* position: fixed; */
 }
 
 .row1{
     background-color: rgb(44, 44, 44);
     margin: 1%;
+    padding: 0% 0% 0% 0%;
 }
 
 .row1 h1{
     text-align: center;
+
 }
 .row2{
     display: grid;
