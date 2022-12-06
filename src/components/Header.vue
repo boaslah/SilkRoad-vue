@@ -21,9 +21,9 @@
 
                             <span class="menu">
 
-                                <router-link to="/" @click="toggleMenu(), showAndHideItem('main', 'widget-main', 'grid')" :class="{active: isActive, 'color-white': notActive}">Home</router-link>  
+                                <router-link to="/" class="color-white" @click="toggleMenu(), showAndHideItem('main', 'widget-main', 'grid')" >Home</router-link>  
 
-                                <router-link to="/properties" class="property" @click="toggleMenu(), breadCrumb('HOUSES')" :class="{active: isActive, 'color-white': notActive}">Our Properties</router-link>
+                                <router-link to="/properties" class="property color-white" @click="toggleMenu(), breadCrumb('HOUSES')">Our Properties</router-link>
 
                             </span>
 
@@ -45,7 +45,7 @@
 
                         <div class="bread-crumb">
 
-                            <router-link to="/" class="color-gray">HOME</router-link>
+                            <router-link to="/" class="color-gray" >HOME</router-link>
                         
                             <i class="fa-regular fa-greater-than"></i>
         
@@ -87,7 +87,11 @@
 <script>
 
     import {showAndHideItem, showMenu, hideMenu} from "../helper.js"
+    import useRoute from "../main.js"
+    // const route = useRoute()
 
+    // console.log(useRoute())
+    // findingPath()
     export default {
         name: 'Header',
         components: {
@@ -96,7 +100,8 @@
             return {
                 menu: '',
                 isActive: false,
-                notActive: true
+                notActive: true,
+                route: false
             }
         },
         methods:{
@@ -110,6 +115,10 @@
                 this.isActive = !this.isActive;
                 this.notActive = !this.notActive;
                 console.log(this.isActive);
+            },
+            findingPath(){
+                this.route = useRoute().path
+                console.log(useRoute().path);
             }
         },
     }

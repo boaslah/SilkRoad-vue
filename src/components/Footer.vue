@@ -17,18 +17,18 @@
 
                 <div class="footer-col2">
                     <div>
-                        <p>Register</p> 
-                        <p>Login</p>
-                        <p>Post Property</p>
-                        <p>Our Recent Postings</p>
-                        <p>FAQ</p>
-                        <p>Contact</p>
+                        <router-link to="/register">Register</router-link>
+                        <router-link to="/login">Login</router-link>
+                        <router-link to="/">Post Property</router-link>
+                        <router-link to="/">Our Recent Postings</router-link>
+                        <router-link to="/">FAQ</router-link>
+                        <router-link to="/">Contact</router-link>
                     </div>
                     <div>
                         <h4></h4>
-                        <p>About Us</p> 
-                        <p>Privacy Policy</p>
-                        <p>Terms and Conditions</p>
+                        <router-link to="/">About Us</router-link>
+                        <router-link to="/">Privacy Policy</router-link>
+                        <router-link to="/">Terms and Conditions</router-link>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             </div>       
 
         </div> 
-        <div class="footer-row2"></div>   
+        <!-- <div class="footer-row2"></div>    -->
         <div class="footer-row3">
             <p>Copyright &copy; 2017 - Kwagei Group - All rights reserve</p>
             <p><b>SILKROAD</b></p>
@@ -64,6 +64,9 @@
 .fa-facebook-f{
     margin: 0% 7% 0% 7%;
 }
+.footer-row3{
+    border-top: solid 2px white;
+}
 
 .footer-col2{
     display: grid;
@@ -81,14 +84,20 @@ span{
     margin-top: 8%;
 }
 
-p{
-    font-size: 75%;
+p, a{
+    font-size: 90%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 5%;
 }
 
 .footer{
     background-color: rgba(98, 110, 114, 0.863);
     display: grid;
-    grid-template-rows: 80% 0.1% 19%;
+    grid-template-rows: 80%  20%;
     color: white;
     padding: 3% 10% 2% 10%;
     margin: 3% -0.4% -2% -2%;
@@ -100,9 +109,9 @@ p{
     grid-template-columns: 33% 33% 33%;
     column-gap: 5%;
 }
-.footer-row2{
+/* .footer-row2{
     background-color: white;
-}
+} */
 @media only screen and (max-width: 600px) {
     .footer{
         margin: 70% -0.4% -2% -2%;

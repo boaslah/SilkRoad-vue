@@ -217,7 +217,7 @@ input[type=range]{
     border:none; 
     color:white; 
     background-color: rgb(39, 135, 214); 
-    border-radius:5%;
+    border-radius:5px;
     position: fixed;
     font-size: 1.0rem;
 }

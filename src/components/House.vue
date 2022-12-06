@@ -58,10 +58,6 @@
     margin-top: -7%;
 }
 
-.houses:hover{
-    cursor: pointer;
-}
-
 p{
     margin-bottom: 3%;
 }

@@ -6,8 +6,13 @@ function showAndHideItem (currentViewId, oppositeViewId, action){
         oppositeView.style.display = "none";
     }
 }
+
+function singleProp(){
+
+}
+
 function showMenu(id){
-    if(id){
+    if(id){ 
         let name = document.getElementById(id);
         name.style.display = "block";  
     } 
@@ -23,4 +28,5 @@ export{
     showAndHideItem,
     hideMenu,
     showMenu,
+    singleProp
 }

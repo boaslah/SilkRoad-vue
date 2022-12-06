@@ -261,9 +261,9 @@ h2{
     border-radius: 5px;
     color: white;
     justify-content: center;
-    width: 25%;
+    width: 20%;
     padding: 1%;
-    margin: -10% 0% 0% 25.5%;
+    margin: -10% 0% 0% 28%;
 }
 
 .col2-row1{

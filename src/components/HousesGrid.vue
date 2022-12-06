@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="img-grid" >
-            <div class="houses" v-for="house in houseData">
+            <div class="houses" @click="showProperty()" v-for="house in houseData">
                 <img src="../assets/list1.jpg" alt="houses">
                 <div class="house-details">
                     <div>
@@ -24,9 +24,13 @@
 <script>
 
     import data from "./../data.json"
+    
 
     export default{
         name: "HousesGrid",
+        methods:{
+            // showProperty
+        },
         data(){
             return{
                 houseData: data.HousesData
@@ -56,6 +60,10 @@ img{
     grid-template-columns: 33% 33% 33%;
     column-gap: 1%;
     margin-bottom: 3%;
+}
+
+.houses:hover{
+    cursor: pointer;
 }
 
 .houses{
