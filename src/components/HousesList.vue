@@ -43,7 +43,7 @@
     
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .img-list{
     margin: 0% -3% 3% 0%;

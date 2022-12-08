@@ -17,7 +17,7 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss">
 .active{
     color:rgb(91, 170, 170);
 }

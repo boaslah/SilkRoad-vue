@@ -42,8 +42,8 @@
                         </div>
                         <div class="prop-menu2">
                             <p>View</p>     
-                            <i @click="showAndHideItem('list-view', 'grid-view', 'block')" class="fa-solid fa-bars icon1"></i>
-                            <i @click="showAndHideItem('grid-view', 'list-view', 'block')" class="fa-sharp fa-solid fa-border-all icon1"></i>
+                            <i @click="showAndHideItem('list-view', 'grid-view', 'block', {})" class="fa-solid fa-bars icon1"></i>
+                            <i @click="showAndHideItem('grid-view', 'list-view', 'block', {})" class="fa-sharp fa-solid fa-border-all icon1"></i>
                             
                             <strong><p>Sort By</p></strong>
                             <div>
@@ -64,6 +64,9 @@
                         </div>
                         <div id="list-view">
                             <HousesList />
+                        </div>
+                        <div id="house-view">
+                            <House />
                         </div>
                     </div>
                     <div class="row2-col2">
@@ -88,8 +91,9 @@
 
     import HousesGrid from "./HousesGrid";
     import HousesList from "./HousesList";
+    import House from "./House";
     import Footer from "./Footer";
-    import {showAndHideItem} from "../helper.js"
+    import {showAndHideItem} from "../helper.js";
 
 
     export default {
@@ -97,7 +101,13 @@
         components:{
             Footer, 
             HousesGrid,
-            HousesList
+            HousesList,
+            House
+        },
+        data(){
+            return{
+                date: false
+            }
         },
         methods:{
             showAndHideItem
@@ -106,7 +116,11 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+#house-view{
+    display: none;
+}
 
 .fa-sharp{
     margin-right: 10%;

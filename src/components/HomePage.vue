@@ -13,7 +13,7 @@
 
                     <input type="text" name="" id="homepage-input" placeholder="    &#128269;  FIND A PROPERTY">
 
-                    <h3 @click="showAndHideItem( 'widget-main', 'main', 'grid')"> <i class="fa fa-filter"></i>         FILTER</h3>
+                    <h3 @click="showAndHideItem( 'widget-main', 'main', 'grid', {})"> <i class="fa fa-filter"></i>         FILTER</h3>
 
                     <div class="main-bottom">
                         <h4>OUR LATEST POSTINGS</h4>
@@ -119,7 +119,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .bread-crumb{
     /* background-color: ; */

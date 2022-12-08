@@ -50,7 +50,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .main2-col1 button{
     border: solid;
     border-color: white;

@@ -60,7 +60,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .fa-facebook-f{
     margin: 0% 7% 0% 7%;
 }

@@ -1,14 +1,14 @@
-function showAndHideItem (currentViewId, oppositeViewId, action){
+let houseData = {};
+
+function showAndHideItem (currentViewId, oppositeViewId, action, house){
     if(currentViewId, oppositeViewId, action){
         let currentView = document.getElementById(currentViewId);
         let oppositeView = document.getElementById(oppositeViewId);
         currentView.style.display = action;
         oppositeView.style.display = "none";
+        houseData = house;
+        console.log(house);
     }
-}
-
-function singleProp(){
-
 }
 
 function showMenu(id){
@@ -16,7 +16,7 @@ function showMenu(id){
         let name = document.getElementById(id);
         name.style.display = "block";  
     } 
-}
+} 
 function hideMenu(id){
     if(id){
         let name = document.getElementById(id);
@@ -28,5 +28,5 @@ export{
     showAndHideItem,
     hideMenu,
     showMenu,
-    singleProp
+    houseData
 }

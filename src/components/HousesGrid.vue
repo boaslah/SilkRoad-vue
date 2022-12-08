@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="img-grid" >
-            <div class="houses" @click="showProperty()" v-for="house in houseData">
+            <div class="houses" @click="showAndHideItem('house-view', 'grid-view', 'block', house)" v-for="house in houseData">
                 <img src="../assets/list1.jpg" alt="houses">
                 <div class="house-details">
                     <div>
@@ -24,12 +24,13 @@
 <script>
 
     import data from "./../data.json"
+    import {showAndHideItem} from "../helper.js"
     
-
     export default{
         name: "HousesGrid",
+    
         methods:{
-            // showProperty
+            showAndHideItem
         },
         data(){
             return{
@@ -40,7 +41,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 p{
     margin-bottom: 3%;

@@ -21,7 +21,7 @@
 
                             <span class="menu">
 
-                                <router-link to="/" class="color-white" @click="toggleMenu(), showAndHideItem('main', 'widget-main', 'grid')" >Home</router-link>  
+                                <router-link to="/" class="color-white" @click="toggleMenu(), showAndHideItem('main', 'widget-main', 'grid', {})" >Home</router-link>  
 
                                 <router-link to="/properties" class="property color-white" @click="toggleMenu(), breadCrumb('HOUSES')">Our Properties</router-link>
 
@@ -126,7 +126,7 @@
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 
 .button-right{
     text-align: right;
