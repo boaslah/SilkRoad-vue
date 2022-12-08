@@ -118,6 +118,10 @@
 
 <style lang="scss" scoped>
 
+i:hover{
+    cursor: pointer;
+}
+
 #house-view{
     display: none;
 }
