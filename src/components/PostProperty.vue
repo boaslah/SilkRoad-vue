@@ -3,22 +3,23 @@
     <div>
 
         <div class="main-div">
+            
             <div class="row1"> 
-                <div @click="category = true; property = '';">
+                <div @click="category = true; property = ''; contact = '';">
                     <span :class="category ? 'active' : ''">Category</span>
                     <hr :class="category ? 'active-hr' : ''">
                 </div>
-                <div @click="location = true; property ='';" :class="location ? 'active' : ''"> 
+                <div @click="location = true; property =''; contact = '';" :class="location ? 'active' : ''"> 
                     <span>Location</span>
                     <hr :class="location ? 'active-hr' : ''">
                 </div>
-                <div @click="category = ''; location = false; property = true;" :class="property ? 'active' : ''">
+                <div @click="category = ''; location = ''; contact = ''; property = true;" :class="property ? 'active' : ''">
                     <span>Property Details</span>
                     <hr :class="property ? 'active-hr' : ''">
                 </div>
-                <div>
+                <div @click="category = ''; location = ''; property = ''; contact = true" :class="contact ? 'active' : ''">
                     <span>Contact Details</span>
-                    <hr>
+                    <hr :class="contact ? 'active-hr' : ''">
                 </div>
             </div>
             <div class="row2">
@@ -31,8 +32,12 @@
                     <span>Select a District with in Grand Cape Mount</span>
                     <hr>
                 </div>
-                 <div v-if="property">
+                <div v-if="property">
                     <span>Provide Property Details</span>
+                    <hr>
+                </div>
+                <div v-if="contact">
+                    <span>Provide contact additional details</span>
                     <hr>
                 </div>
 
@@ -57,43 +62,43 @@
                     <p>Porkpa District</p>
                     <p>Tewor District</p>
                     <p>Other areas within the country</p>
-                    <select class="select-arrow search-select option-text" name="" id="">
-                        <option value="Rooms">   Most Recent</option>
+                    <select class="select-arrow search-select option" name="" id="">
+                        <option value="Rooms">Other areas (A-Z)</option>
                     </select>
                 </div>
                 <div v-if="property">
                     <div>
-                        <input type="text">
+                        <input class="wide-inputs" type="text" placeholder="Title">
                     </div>
                     <div class="select-inputs">
                         <div>
-                            <select class="select-arrow search-select option-text" name="" id="">
-                                <option value="Rooms">   Most Recent</option>
+                            <select class="select-arrow search-select option" name="" id="">
+                                <option value="Rooms">Bedrooms</option>
                             </select>
-                            <select class="select-arrow search-select option-text" name="" id="">
-                                <option value="Rooms">   Most Recent</option>
+                            <select class="select-arrow search-select option" name="" id="">
+                                <option value="Rooms">Livingrooms</option>
                             </select>
-                            <select class="select-arrow search-select option-text" name="" id="">
-                                <option value="Rooms">   Most Recent</option>
+                            <select class="select-arrow search-select option" name="" id="">
+                                <option value="Rooms">Size</option>
                             </select>
                         </div>
                         <div>
-                            <select class="select-arrow search-select option-text" name="" id="">
-                                <option value="Rooms">   Most Recent</option>
+                            <select class="select-arrow search-select option" name="" id="">
+                                <option value="Rooms">Bathrooms</option>
                             </select>
-                            <select class="select-arrow search-select option-text" name="" id="">
-                                <option value="Rooms">   Most Recent</option>
+                            <select class="select-arrow search-select option" name="" id="">
+                                <option value="Rooms">Kitchens</option>
                             </select>
-                            <select class="select-arrow search-select option-text" name="" id="">
-                                <option value="Rooms">   Most Recent</option>
+                            <select class="select-arrow search-select option" name="" id="">
+                                <option value="Rooms">Price</option>
                             </select>
                         </div>
                     </div>
                     <div>
-                        <input type="text">
+                        <input class="wide-inputs" type="text" placeholder="Physical Address / Landmarks">
                     </div>
                     <div>
-                        <textarea></textarea>
+                        <textarea placeholder="Description"></textarea>
                     </div>
                     <div>
                         <button>Upload Pictures</button>
@@ -108,21 +113,79 @@
                     <strong><p>AMENITIES</p></strong>
                     <div class="check-boxes">
                         <div>
-                            <p>Garage   <input type="checkbox"></p> 
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            
                         </div>
                         <div>
-                            <p>Garage</p> <input type="checkbox">
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
                         </div>
                         <div>
-                            <p>Garage</p> <input type="checkbox">
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
                         </div>
                         <div>
-                            <p>Garage</p> <input type="checkbox">
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
+                            <input type="checkbox" id="" name="">
+                            <label>Scales</label>
                         </div>
-
+                        <button class="float-right">Continue</button>
+                    </div>
+                </div>
+                <div v-if="contact">
+                    <div>
+                        <h5>Name</h5>
+                        <p>Nathan Musulyn</p>
                     </div>
                     <div>
-                        <button>Continue</button>
+                        <h5>Email</h5>
+                        <p>james@tblackie.com</p>
+                    </div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <button>Done</button>
                     </div>
                 </div>
             </div>
@@ -146,7 +209,8 @@
             return{
                 category: true,
                 location: '',
-                property: ''
+                property: '',
+                contact: ''
             }
         },
         methods:{
@@ -159,12 +223,16 @@
 </script>
 
 <style lang="scss" scoped>
+
+.float-right{
+    float: left;
+}
 .row1 hr{
     margin-left: -1%;
-    width: 150%;
+    width: 139%;
 }
 .active-hr{
-    border: 1px solid rgb(91, 170, 170);
+    border: 2px solid rgb(91, 170, 170);
 }
 .row2 hr{
     margin-left: -1%;
@@ -174,16 +242,22 @@
 .check-boxes{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    width: 200%;    
+    width:168%;
+    column-gap: 10%;
+    padding: 4% 10% 4% 13%;
+    margin: 5% 0% 5% -14%;
 }
-
+label{
+    // margin-top: 100%;
+    // color: red;
+}
 .pictures{
     display:grid;
     grid-template-columns: 19% 19% 19% 19% 19%;
     column-gap:2%;
     background-color: rgb(209, 215, 223);
     width:168%;
-    padding: 2% 10% 2% 13%;
+    padding: 4% 10% 4% 13%;
     margin-top: 5%;
 }
 img{
@@ -204,18 +278,37 @@ img{
 .no-display{
     display:none;
 }
+.wide-inputs{
+    width:185% !important; 
+}
 
+textarea{
+    width:170%;
+    border: none;  
+    color: rgba(98, 110, 114, 0.863);
+    background-color: rgb(209, 215, 223);
+    padding: 10%;
+    margin-bottom:8%;
+}
+.option{
+    padding-left: 5% !important;
+    color: rgba(98, 110, 114, 0.863);
+    font-size: 90% !important;
+}
 input{
     border: none;  
-    width:185%; 
+    width:100%; 
     color: rgba(98, 110, 114, 0.863);
     background-color: rgb(209, 215, 223);
     padding: 3%;
     margin-bottom:8%;
 }
+.select-inputs select{
+    width: 180% !important;
+}
 
 select.search-select{
-    width: 180%;
+    width: 90%;
     border: none;
     appearance: none;
     padding: 4% 0% 3% 0%;
@@ -281,7 +374,7 @@ button{
     display: grid;
     grid-template-rows: 5% 5% 90%;
     margin: 12% 0% 0% 18%;
-    height: 150vh;
+    height: 180vh;
     width:70%;
     row-gap: 2%;
 }
