@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss">
 .active{
-    color:rgb(91, 170, 170);
+  color:rgb(91, 170, 170);
 }
 button:hover{
   cursor: pointer;
@@ -40,4 +40,5 @@ body.home, body.login, body.register{
 body.propertiesView{
   background: rgb(233, 233, 233) !important;
 }
+
 </style>

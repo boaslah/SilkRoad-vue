@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="button-right">
-                            <button>Post a Property</button>
+                            <router-link to="/post-property" ><button>Post a Property</button></router-link>
                         </div>
 
                     </div>
@@ -231,6 +231,7 @@ hr{
     width: 75%;
     background-color:white;
     opacity:0.9;
+    color:red;
     position: fixed;
 }
 

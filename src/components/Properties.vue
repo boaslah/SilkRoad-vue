@@ -223,6 +223,7 @@ input[type="range"]::-webkit-slider-thumb {
     display: grid;
     grid-template-columns: 20% 80%;
     margin: 10% 3% 0% 2%;
+    height: 165vh;
 }
 
 .col1 p{
