@@ -21,17 +21,17 @@
 
                             <span class="menu">
 
-                                <router-link to="/" class="color-white" @click="toggleMenu(), showAndHideItem('main', 'widget-main', 'grid', {})" >Home</router-link>  
+                                <router-link to="/" :class="menu ?'color-white': 'active'" @click="menu = false; showAndHideItem('main', 'widget-main', 'grid', {})" >Home</router-link>  
 
-                                <router-link to="/properties" class="property color-white" @click="toggleMenu(), breadCrumb('HOUSES')">Our Properties</router-link>
+                                <router-link to="/properties" :class="menu === 'HOUSES'? 'active property' : 'color-white property' " @click="menu = 'HOUSES'">Our Properties</router-link>
 
                             </span>
 
                             <div class="register">
 
-                            <router-link to="/login" @click="breadCrumb('LOGIN')" class="color-white">Login</router-link> |
+                            <router-link to="/login" @click="menu = 'LOGIN'" :class="menu === 'LOGIN'? 'active' : 'color-white'">Login</router-link> |
         
-                            <router-link to="/register" @click="breadCrumb('REGISTER')"  class="color-white">Register</router-link>
+                            <router-link to="/register" @click="menu = 'REGISTER'"  :class="menu === 'REGISTER'? 'active' : 'color-white'">Register</router-link>
 
                             </div>
 
@@ -45,11 +45,11 @@
 
                         <div class="bread-crumb">
 
-                            <router-link to="/" class="color-gray" >HOME</router-link>
+                            <router-link to="/" v-if="menu" class="color-gray" >HOME</router-link>
                         
-                            <i class="fa-regular fa-greater-than"></i>
+                            <i v-if="menu" class="fa-regular fa-greater-than"></i>
         
-                            <router-link to="/" class="color-white"><strong>{{menu}}</strong></router-link>
+                            <router-link v-if="menu" to="/" class="color-white"><strong>{{menu}}</strong></router-link>
                         </div>
 
                         <div class="button-right">
@@ -87,11 +87,7 @@
 <script>
 
     import {showAndHideItem, showMenu, hideMenu} from "../helper.js"
-    import useRoute from "../main.js"
-    // const route = useRoute()
 
-    // console.log(useRoute())
-    // findingPath()
     export default {
         name: 'Header',
         components: {
@@ -99,27 +95,13 @@
         data(){
             return {
                 menu: '',
-                isActive: false,
-                notActive: true,
-                route: false
+
             }
         },
         methods:{
             showMenu,
             hideMenu,
-            showAndHideItem,
-            breadCrumb(menu){
-                this.menu = menu;
-            },
-            toggleMenu(){
-                this.isActive = !this.isActive;
-                this.notActive = !this.notActive;
-                console.log(this.isActive);
-            },
-            findingPath(){
-                this.route = useRoute().path
-                console.log(useRoute().path);
-            }
+            showAndHideItem
         },
     }
 
