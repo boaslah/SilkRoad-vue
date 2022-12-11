@@ -22,7 +22,7 @@
                         <p>0778128252</p>
                     </div>
                     <div>
-                        <button>Done</button>
+                        <button>Update Profile</button>
                     </div>
                 </div>
 
@@ -79,11 +79,13 @@ button{
     background-color:rgba(98, 110, 114, 0.863) ;
     width: 50%;
     padding: 2%;
+    float: right;
 }
 
 .main-div{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 50%;
+    column-gap: 5%;
     height: 100vh;
     width:99%;
     margin: 10% 0% 0% 0%;
@@ -96,7 +98,7 @@ button{
     color: rgba(98, 110, 114, 0.863);
 }
 .col1 hr{
-    width: 60%;
+    width: 100%;
     margin-left: -0.1%;
 }
 hr{
@@ -106,15 +108,27 @@ hr{
     overflow: scroll;
     float: right;
     direction: rtl;
+    margin-top: -0.1%;
 }
 
 .active-hr{
     border: 2px solid rgb(91, 170, 170);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background-color: rgba(98, 110, 114, 0.863);
   border-radius: 20px;
-  border: 3px solid orange;
+}
+.col2::-webkit-scrollbar {
+  width: 12px;              
+}
+
+.col2::-webkit-scrollbar-track {
+  background: rgba(200, 202, 202, 0.863);        
+}
+
+.col2 {
+  scrollbar-width: thin;          
+  scrollbar-color: rgba(98, 110, 114, 0.863) rgba(144, 151, 153, 0.863);
 }
 .items{
     direction: ltr;
