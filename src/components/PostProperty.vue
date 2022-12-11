@@ -111,66 +111,10 @@
                         <div><img src="../assets/list1.jpg" alt="houses"></div>
                     </div>
                     <strong><p>AMENITIES</p></strong>
-                    <div class="check-boxes">
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                            <input type="checkbox" id="" name="">
-                            <label>Scales</label>
-                        </div>
-                        <button class="float-right">Continue</button>
+                    <div>
+                        <Amenities />                        
                     </div>
+                    <button class="float-right">Continue</button>
                 </div>
                 <div v-if="contact">
                     <div>
@@ -199,11 +143,13 @@
 <script>
 
     import Footer from "./Footer";
+    import Amenities from "./Amenities"
 
     export default {
         name: 'PostProperties',
         components:{
             Footer, 
+            Amenities
         },
         data(){
             return{
@@ -239,18 +185,6 @@
     width: 70%;
 }
 
-.check-boxes{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    width:168%;
-    column-gap: 10%;
-    padding: 4% 10% 4% 13%;
-    margin: 5% 0% 5% -14%;
-}
-label{
-    // margin-top: 100%;
-    // color: red;
-}
 .pictures{
     display:grid;
     grid-template-columns: 19% 19% 19% 19% 19%;
