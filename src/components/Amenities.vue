@@ -79,6 +79,20 @@ export default{
     grid-template-columns: 50% 50%;
 }
 
+input[type="checkbox"]{
+    appearance: none;
+    background-color: rgb(233, 233, 233);
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.1em solid rgba(144, 151, 153, 0.863);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+
+
 .check-boxes{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
