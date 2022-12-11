@@ -5,20 +5,20 @@
         <div class="main-div">
             <div class="col1">
                 <div>
-                    <h3>My Profile</h3>
+                    <h3 class="h3-color">My Profile</h3>
                     <hr>
                 </div>
                 <div>
                     <div>
-                        <h3>Name</h3>
+                        <h4>Name</h4>
                         <p>Nathan Musulyn</p>
                     </div>
                     <div>
-                        <h3>Email</h3>
+                        <h4>Email</h4>
                         <p>james@tblackie.com</p>
                     </div>
                     <div>
-                        <h3>Phone</h3>
+                        <h4>Phone</h4>
                         <p>0778128252</p>
                     </div>
                     <div>
@@ -28,7 +28,21 @@
 
             </div>
             <div class="col2">
-                <HousesList />
+                <div class="items">
+                    <div class="row1">
+                        <div>
+                            <h3 class="active">My Postings</h3>
+                            <hr class="active-hr">
+                        </div>
+                        <div>
+                            <h3 class="h3-color">My Favorites</h3>
+                            <hr>
+                        </div>
+                    </div>
+                    <div>
+                        <HousesList />
+                    </div>
+                </div>
             </div>
         </div>
        
@@ -78,16 +92,37 @@ button{
     margin-left: 40%;
 }
 
-h3{
+.h3-color, h4, span{
     color: rgba(98, 110, 114, 0.863);
 }
-hr{
+.col1 hr{
     width: 60%;
     margin-left: -0.1%;
+}
+hr{
+    margin-top: -3%;
 }
 .col2{
     overflow: scroll;
     float: right;
+    direction: rtl;
+}
+
+.active-hr{
+    border: 2px solid rgb(91, 170, 170);
+}
+::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
+.items{
+    direction: ltr;
+    margin: 0% 0% 0% 2%;
+}
+.row1{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 p{
     color: rgba(144, 151, 153, 0.863);
