@@ -68,7 +68,7 @@
                 </div>
                 <div v-if="property">
                     <div>
-                        <input class="wide-inputs" type="text" placeholder="Title">
+                        <input class="wide-inputs margin-top" type="text" placeholder="Title">
                     </div>
                     <div class="select-inputs">
                         <div>
@@ -118,11 +118,11 @@
                 </div>
                 <div v-if="contact">
                     <div>
-                        <h5>Name</h5>
+                        <h3>Name</h3>
                         <p>Nathan Musulyn</p>
                     </div>
                     <div>
-                        <h5>Email</h5>
+                        <h3>Email</h3>
                         <p>james@tblackie.com</p>
                     </div>
                     <div>
@@ -158,11 +158,6 @@
                 property: '',
                 contact: ''
             }
-        },
-        methods:{
-            updateData(){
-
-            }
         }
     }
 
@@ -183,6 +178,10 @@
 .row2 hr{
     margin-left: -1%;
     width: 70%;
+}
+h3{
+    color: rgba(98, 110, 114, 0.863);
+
 }
 
 .pictures{
@@ -228,6 +227,9 @@ textarea{
     padding-left: 5% !important;
     color: rgba(98, 110, 114, 0.863);
     font-size: 90% !important;
+}
+.margin-top{
+    margin-top: 5%;
 }
 input{
     border: none;  
@@ -293,6 +295,9 @@ select.select-arrow {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 70%;
+}
+.row3{
+    margin-top: -5%;
 }
 
 button{

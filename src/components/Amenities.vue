@@ -89,7 +89,6 @@ input[type="checkbox"]{
     height: 1.15em;
     border: 0.1em solid rgba(144, 151, 153, 0.863);
     border-radius: 0.15em;
-    transform: translateY(-0.075em);
 }
 
 

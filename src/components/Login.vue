@@ -26,7 +26,7 @@
 
                     <p class="active">Forget your password?</p>
 
-                    <button>Login</button>
+                    <button><router-link to="/my-profile">Login</router-link></button>
                     <!-- <span class="align-left">Login With  <i class="fa-brands fa-facebook-f"></i>    <i class="fa-brands fa-twitter"></i> </span> -->
                 </div>
             </div>
@@ -54,7 +54,7 @@
     margin-top: -500%;
 }
 
-.main2-col1 a{
+a{
     text-decoration: none;
     color: white;
 }
