@@ -114,7 +114,9 @@
                     <div>
                         <Amenities />                        
                     </div>
-                    <button class="float-right">Continue</button>
+                    <div class="float-right">
+                        <button>Continue</button>
+                    </div>
                 </div>
                 <div v-if="contact">
                     <div>
@@ -128,7 +130,7 @@
                     <div>
                         <input type="text">
                     </div>
-                    <div>
+                    <div class="contact-button">
                         <button>Done</button>
                     </div>
                 </div>
@@ -164,11 +166,22 @@
 </script>
 
 <style lang="scss" scoped>
-
+.contact-button{
+    width:105%;
+}
+.contact-button button{
+    float: right;
+}
 .float-right{
-    float: left;
+    width: 190%;
+}
+.float-right button{
+    float: right;
+    padding: 2%;
+    width: 30%;
 }
 .row1 hr{
+
     margin-left: -1%;
     width: 139%;
 }

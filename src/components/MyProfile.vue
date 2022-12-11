@@ -8,7 +8,7 @@
                     <h3 class="h3-color">My Profile</h3>
                     <hr>
                 </div>
-                <div>
+                <div v-if="profile">
                     <div>
                         <h4>Name</h4>
                         <p>Nathan Musulyn</p>
@@ -22,7 +22,24 @@
                         <p>0778128252</p>
                     </div>
                     <div>
-                        <button>Update Profile</button>
+                        <button @click="profile ='' ; update = true" v-if="profile">Update Profile</button>
+                    </div>
+                </div>
+                <div v-if="update">
+                    <div>
+                        <h4>Name</h4>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <button @click="update = '' ; profile = true" v-if="update" >Save</button>
                     </div>
                 </div>
 
@@ -63,6 +80,8 @@
         },
         data(){
             return{
+                profile: true,
+                update: ''
                 
             }
         }
@@ -71,6 +90,14 @@
 </script>
 
 <style lang="scss" scoped>
+input{
+    border: none;  
+    width:94%; 
+    color: rgba(98, 110, 114, 0.863);
+    background-color: rgb(209, 215, 223);
+    padding: 3%;
+    margin-bottom:4%;
+}
 
 button{
     border: none;
