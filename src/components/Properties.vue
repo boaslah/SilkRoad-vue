@@ -3,7 +3,7 @@
     <div>
         <div class="properties-main" :class="house ? 'col2-height' : ''">
 
-            <div class="col1">
+            <div class="col1" :class="house ? 'height' : ''">
 
                 <div class="side-nav">
                     <h3>Search</h3>
@@ -69,7 +69,7 @@
                             <House />
                         </div>
                     </div>
-                    <div class="row2-col2">
+                    <div class="row2-col2" :class="house ? 'height' : ''">
 
                         <h2>Advertisement</h2>
 
@@ -118,9 +118,11 @@
 </script>
 
 <style lang="scss" scoped>
+.height{
+    height:93vh !important;
+}
 .col2-height{
-    // margin-bottom: 50%;
-    height: 200vh !important;
+    height: 240vh !important;
 }
 
 i:hover{
@@ -246,7 +248,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .side-nav{
     height: 50%;
-    // background-color: red;
 }
 
 h2, h3{

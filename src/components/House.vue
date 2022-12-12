@@ -52,8 +52,7 @@
             <i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i>
             <h4>SHARE PROPERTY</h4>
 
-
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.728985311669!2d-10.7470872!3d6.27264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9271766a21802cbd!2sKwagei%20Group!5e0!3m2!1sen!2s!4v1670858548086!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
     </div>
