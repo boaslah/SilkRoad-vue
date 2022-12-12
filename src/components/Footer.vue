@@ -62,6 +62,7 @@
 .brand{
     float: right;
     font-size: 100%;
+    font-weight: bold;
 }
 
 .fa-facebook-f{
@@ -75,9 +76,6 @@
 .footer-col2{
     display: grid;
     grid-template-columns: 50% 50%;
-}
-.footer{
-    font-weight: bold;
 }
 
 span{

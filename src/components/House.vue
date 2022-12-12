@@ -5,18 +5,48 @@
             <img src="../assets/background-image.jpg" alt="houses">
         </div>
         <div>
-            <h2>{{house.houseDes}}</h2>
-            <p><i class="fa-sharp fa-solid fa-location-pin active"></i>  {{house.houseLoc}}</p>
-            <p><span><i class="fa fa-triangle-exclamation active"></i>   {{house.checkIns}} <i class="fa fa-computer active"></i>  {{house.TV}}  <i class="fa fa-book active"></i>  {{house.beds}}  <i class="fa fa-lightbulb active"></i> {{house.light}}</span></p>
-            <p>{{house.houseOwner}}</p>
+            <div class="row1">
+                <div>
+                    <h2>{{house.houseDes}}</h2>
+                    <p><i class="fa-sharp fa-solid fa-location-pin active"></i>                            {{house.houseLoc}}</p>
+                </div>
+                <div>
+                    <span class="price">$500.00/month</span>
+                </div>
+            </div>
+
+            <p class="amenities"><span><i class="fa fa-triangle-exclamation active"></i>   {{house.checkIns}}</span><span> <i class="fa fa-computer active"></i>  {{house.TV}}</span><span>  <i class="fa fa-book active"></i>  {{house.beds}}</span><span>  <i class="fa fa-lightbulb active"></i> {{house.light}}</span></p>
+            <p class="owner">{{house.houseOwner}}</p>
             <button>Give {{house.houseOwner}} a call</button>   <button>Send {{house.houseOwner}} an Email</button>
             <h4>PROPERTY DESCRIPTION</h4>
-            <p>I don't have anything here for now, bye!!!</p>
+            <p>We have learned that components can accept props, which can be JavaScript values of any type. But how about template content? In some cases, we may want to pass a template fragment to a child component, and let the child component render the fragment within its own template.</p>
             <h4>AVAILABLE AMENITIES</h4>
-            <tr>Swiming Pool</tr>
-            <tr>Swiming Pool</tr>
-            <tr>Swiming Pool</tr>
-            <tr>Swiming Pool</tr>
+            <div class="avaliable-amenites">
+                <div>
+                    <span>Garage</span>
+                    <span>Swimming Pool</span>
+                    <span>Laundry Room</span>
+                    <span>Advertisement</span>
+                    <span>Garden</span>
+                    <span>Generator</span>
+                </div>
+                <div>
+                    <span>Garage</span>
+                    <span>Swimming Pool</span>
+                    <span>Laundry Room</span>
+                    <span>Advertisement</span>
+                    <span>Garden</span>
+                    <span>Generator</span>   
+                </div>
+                <div>
+                    <span>Garage</span>
+                    <span>Swimming Pool</span>
+                    <span>Laundry Room</span>
+                    <span>Advertisement</span>
+                    <span>Garden</span>
+                    <span>Generator</span>
+                </div>
+            </div>
 
             <h4>SHARE PROPERTY</h4>
             <i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i>
@@ -49,11 +79,61 @@
 
 <style lang="scss" scoped>
 
+.avaliable-amenites{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.avaliable-amenites span{
+    display: block;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.amenities span{
+    margin-right: 3%;
+}
+.owner{
+    margin: 4% 0% 1% 0%;
+}
+.amenities{
+    margin-top: 1%;
+}
+
+.price{
+    background-color: rgba(91, 170, 170, 0.822);
+    color: white;
+    padding: 4%;
+    font-size: 100%;
+    float: right;
+    width: 45%;
+    font-weight: bold;
+    margin-top: 5%;
+}
+.row1{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 5%;
+}
+.row1 p{
+    margin-top: -3%;
+}
+
+button{
+    background-color: rgba(98, 110, 114, 0.863);
+    border: none;
+    border-radius: 5px;
+    padding: 1.5%;
+    color: white;
+    font-size: 15px;
+    margin-right: 3.5%;
+}
+
 .house{
     display:grid;
     grid-template-rows: 30% 70%;
     color: rgba(98, 110, 114, 0.863);
     font-family: 'Roboto', serif;
+    margin-bottom: -50%;
 }
 
 img{

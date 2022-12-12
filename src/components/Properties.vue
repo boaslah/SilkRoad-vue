@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <div class="properties-main">
+        <div class="properties-main" :class="house ? 'col2-height' : ''">
 
             <div class="col1">
 
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col2">
-                <div class="col2-row1">
+                <div class="col2-row1" v-if="!house">
                     <div class="prop-menu">
                         <div class="prop-menu1">
                             <strong><p class="active">All</p></strong>
@@ -59,10 +59,10 @@
                 <div class="col2-row2">
 
                     <div class="row2-col1">
-                        <div id="grid-view">
+                        <div id="grid-view" @click="house = true">
                             <HousesGrid />
                         </div>
-                        <div id="list-view">
+                        <div id="list-view" @click="house = true">
                             <HousesList />
                         </div>
                         <div id="house-view">
@@ -77,7 +77,7 @@
 
                 </div>
 
-                <div>
+                <div v-if="!house">
                     <button class="btn2"> Load More</button>
                 </div>
             </div>
@@ -106,7 +106,8 @@
         },
         data(){
             return{
-                date: false
+                date: false,
+                house: ''
             }
         },
         methods:{
@@ -117,6 +118,10 @@
 </script>
 
 <style lang="scss" scoped>
+.col2-height{
+    // margin-bottom: 50%;
+    height: 200vh !important;
+}
 
 i:hover{
     cursor: pointer;
@@ -238,6 +243,10 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 7%;
     margin: 3% 5% 0% 3%;
     height: 55%;
+}
+.side-nav{
+    height: 50%;
+    // background-color: red;
 }
 
 h2, h3{
