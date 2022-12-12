@@ -5,6 +5,10 @@
             <img src="../assets/background-image.jpg" alt="houses">
         </div>
         <div>
+            <div>
+            <i class="fa-solid fa-ellipsis scroll"></i><i class="fa-solid fa-ellipsis scroll"></i>
+
+            </div>
             <div class="row1">
                 <div>
                     <h2>{{house.houseDes}}</h2>
@@ -49,10 +53,10 @@
             </div>
 
             <h4>SHARE PROPERTY</h4>
-            <i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram social-icons"></i><i class="fa-brands fa-facebook-f social-icons"></i><i class="fa-brands fa-twitter social-icons"></i><i class="fa-solid fa-ellipsis social-icons"></i>
             <h4>SHARE PROPERTY</h4>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.728985311669!2d-10.7470872!3d6.27264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9271766a21802cbd!2sKwagei%20Group!5e0!3m2!1sen!2s!4v1670858548086!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.728985311669!2d-10.7470872!3d6.27264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9271766a21802cbd!2sKwagei%20Group!5e0!3m2!1sen!2s!4v1670858548086!5m2!1sen!2s" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
     </div>
@@ -77,6 +81,15 @@
 </script>
 
 <style lang="scss" scoped>
+
+.scroll{
+    font-size: 50px;
+}
+
+.social-icons{
+    margin-right: 4%;
+    font-size: 30px;
+}
 
 .avaliable-amenites{
     display: grid;
@@ -111,7 +124,7 @@
 .row1{
     display: grid;
     grid-template-columns: 60% 40%;
-    margin-top: 5%;
+    margin-top: -3%;
 }
 .row1 p{
     margin-top: -3%;

@@ -122,7 +122,7 @@
     height:93vh !important;
 }
 .col2-height{
-    height: 240vh !important;
+    height: 255vh !important;
 }
 
 i:hover{
