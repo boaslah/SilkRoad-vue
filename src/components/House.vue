@@ -5,9 +5,8 @@
             <img src="../assets/background-image.jpg" alt="houses">
         </div>
         <div>
-            <div>
-            <i class="fa-solid fa-ellipsis scroll"></i><i class="fa-solid fa-ellipsis scroll"></i>
-
+            <div class="center">
+                <i class="fa-solid fa-ellipsis scroll active"></i>   <i class="fa-solid fa-ellipsis scroll active"></i>
             </div>
             <div class="row1">
                 <div>
@@ -81,6 +80,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+.center{
+    padding: 0% 30% 0% 45%;
+}
 
 .scroll{
     font-size: 50px;
