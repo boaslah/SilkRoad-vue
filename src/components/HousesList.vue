@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="img-list">
-            <div class="houses" v-for="house in houseData">
+            <div class="houses" v-for="house in houseData" @click="showAndHideItem('house-view', 'list-view', 'block')">
                 <div>
                     <img src="../assets/list1.jpg" alt="houses">
                 </div>
@@ -28,6 +28,7 @@
 <script>
 
     import data from "./../data-list.json"
+    import {showAndHideItem} from "../helper.js"
 
 
 
@@ -38,6 +39,9 @@
                 houseData: data.HousesData
             }
             
+        },
+        methods:{
+            showAndHideItem
         }
     }
     
