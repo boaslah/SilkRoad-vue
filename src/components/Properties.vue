@@ -42,8 +42,8 @@
                         </div>
                         <div class="prop-menu2">
                             <p>View</p>     
-                            <i @click="showAndHideItem('list-view', 'grid-view', 'block', {})" class="fa-solid fa-bars icon1"></i>
-                            <i @click="showAndHideItem('grid-view', 'list-view', 'block', {})" class="fa-sharp fa-solid fa-border-all icon1"></i>
+                            <i @click="showAndHideItem('list-view', 'grid-view', 'block')" class="fa-solid fa-bars icon1"></i>
+                            <i @click="showAndHideItem('grid-view', 'list-view', 'block')" class="fa-sharp fa-solid fa-border-all icon1"></i>
                             
                             <strong><p>Sort By</p></strong>
                             <div>

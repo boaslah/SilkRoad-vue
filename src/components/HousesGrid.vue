@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="img-grid" >
-            <div class="houses" @click="showAndHideItem('house-view', 'grid-view', 'block', house)" v-for="house in houseData">
+            <div class="houses" @click="showAndHideItem('house-view', 'grid-view', 'block'), houseDisplay = true" v-for="house in houseData">
                 <img src="../assets/list1.jpg" alt="houses">
                 <div class="house-details">
                     <div>
@@ -16,6 +16,8 @@
                         <div><i class="fa fa-lightbulb active"></i> {{house.light}}</div>
                     </div>
                 </div>
+
+                <div v-if="houseDisplay"><House :property="house" /></div>
             </div>
         </div>
     </div>
@@ -25,16 +27,20 @@
 
     import data from "./../data.json"
     import {showAndHideItem} from "../helper.js"
+    import House from "./House"
     
     export default{
         name: "HousesGrid",
-    
+        components: {
+            House
+        },
         methods:{
             showAndHideItem
         },
         data(){
             return{
-                houseData: data.HousesData
+                houseData: data.HousesData,
+                houseDisplay: ''
             }
             
         }

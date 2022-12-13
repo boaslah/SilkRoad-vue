@@ -21,7 +21,7 @@
 
                             <span class="menu">
 
-                                <router-link to="/" :class="menu ?'color-white': 'active'" @click="menu = false; showAndHideItem('main', 'widget-main', 'grid', {})" >Home</router-link>  
+                                <router-link to="/" :class="menu ?'color-white': 'active'" @click="menu = false; showAndHideItem('main', 'widget-main', 'grid')" >Home</router-link>  
 
                                 <router-link to="/properties" :class="menu === 'HOUSES'? 'active property' : 'color-white property' " @click="menu = 'HOUSES'">Our Properties</router-link>
 

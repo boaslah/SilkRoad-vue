@@ -10,17 +10,17 @@
             </div>
             <div class="row1">
                 <div>
-                    <h2>{{house.houseDes}}</h2>
-                    <p><i class="fa-sharp fa-solid fa-location-pin active"></i>                            {{house.houseLoc}}</p>
+                    <h2>3 Bedroom Townhouse</h2>
+                    <p><i class="fa-sharp fa-solid fa-location-pin active"></i>                            Du-port Road, Monrovia, Liberia</p>
                 </div>
                 <div>
                     <span class="price">$500.00/month</span>
                 </div>
             </div>
 
-            <p class="amenities"><span><i class="fa fa-triangle-exclamation active"></i>   {{house.checkIns}}</span><span> <i class="fa fa-computer active"></i>  {{house.TV}}</span><span>  <i class="fa fa-book active"></i>  {{house.beds}}</span><span>  <i class="fa fa-lightbulb active"></i> {{house.light}}</span></p>
-            <p class="owner">{{house.houseOwner}}</p>
-            <button>Give {{house.houseOwner}} a call</button>   <button>Send {{house.houseOwner}} an Email</button>
+            <p class="amenities"><span><i class="fa fa-triangle-exclamation active"></i>   4</span><span> <i class="fa fa-computer active"></i>  7</span><span>  <i class="fa fa-book active"></i>  8</span><span>  <i class="fa fa-lightbulb active"></i> 3</span></p>
+            <p class="owner">Peter Dennis</p>
+            <button>Give Peter Dennis a call</button>   <button>Send Peter Dennis an Email</button>
             <h4>PROPERTY DESCRIPTION</h4>
             <p>We have learned that components can accept props, which can be JavaScript values of any type. But how about template content? In some cases, we may want to pass a template fragment to a child component, and let the child component render the fragment within its own template.</p>
             <h4>AVAILABLE AMENITIES</h4>
@@ -65,16 +65,11 @@
 
 <script>
 
-    import {houseData} from "../helper.js"
-    console.log("hello", houseData);
     export default{
         name: "House",
-        data(){
-            return{
-                house: houseData
-            }
+        props:{
+            property: Object
         },
-
     }
     
 </script>
