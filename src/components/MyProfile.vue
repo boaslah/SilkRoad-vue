@@ -28,15 +28,18 @@
                 <div v-if="update">
                     <div>
                         <h4>Name</h4>
-                        <input type="text">
+                        <input type="text" placeholder="James Gaye">
                     </div>
                     <div>
                         <h4>Email</h4>
-                        <input type="text">
+                        <input type="text" placeholder="jamesgaye@gmail.com">
                     </div>
                     <div>
                         <h4>Phone</h4>
-                        <input type="text">
+                        <select name="" id="">
+                            <option value="">+ 231</option>
+                        </select>
+                        <input id="select-input" type="text" placeholder="0778128252">
                     </div>
                     <div>
                         <button @click="update = '' ; profile = true" v-if="update" >Save</button>
@@ -90,6 +93,17 @@
 </script>
 
 <style lang="scss" scoped>
+#select-input{
+    width: 74%;
+}
+h4{
+    margin-bottom: -0.1%;
+}
+select{
+    background-color:rgba(98, 110, 114, 0.863);
+    padding: 2%;
+    color: white;
+}
 input{
     border: none;  
     width:94%; 
@@ -97,6 +111,7 @@ input{
     background-color: rgb(209, 215, 223);
     padding: 3%;
     margin-bottom:4%;
+    margin-top: 0.1%;
 }
 
 button{
@@ -167,6 +182,13 @@ hr{
 }
 p{
     color: rgba(144, 151, 153, 0.863);
+}
+@media only screen and (max-width: 1000px) {
+
+    .main-div{
+        margin: 26% 0% 0% 0%;
+    }
+
 }
 
 </style>

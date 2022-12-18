@@ -78,7 +78,8 @@
                             <select class="select-arrow search-select option" name="" id="">
                                 <option value="Rooms">Livingrooms</option>
                             </select>
-                            <select class="select-arrow search-select option" name="" id="">
+                            <input type="text" placeholder="Size">
+                            <select class="short-select"  name="" id="">
                                 <option value="Rooms">Size</option>
                             </select>
                         </div>
@@ -89,7 +90,8 @@
                             <select class="select-arrow search-select option" name="" id="">
                                 <option value="Rooms">Kitchens</option>
                             </select>
-                            <select class="select-arrow search-select option" name="" id="">
+                            <input type="text" placeholder="Price">
+                            <select class="short-select"  name="" id="">
                                 <option value="Rooms">Price</option>
                             </select>
                         </div>
@@ -128,7 +130,9 @@
                         <p>james@tblackie.com</p>
                     </div>
                     <div>
-                        <input type="text">
+                        <select name="" id="">
+                            <option value="">+231</option>
+                        </select><input id="contact" type="text">
                     </div>
                     <div class="contact-button">
                         <button>Done</button>
@@ -166,14 +170,26 @@
 </script>
 
 <style lang="scss" scoped>
+.short-select{
+    width: 27%;
+    padding: 3.5%;
+}
+#contact{
+    width: 69%;
+}
+select{
+    background-color:rgba(98, 110, 114, 0.863);
+    padding: 3%;
+    color: white;
+}
 .contact-button{
-    width:105%;
+    width:100%;
 }
 .contact-button button{
     float: right;
 }
 .float-right{
-    width: 190%;
+    width:195%;
 }
 .float-right button{
     float: right;
@@ -212,8 +228,9 @@ img{
 
 .select-inputs{
     display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 50%;
+    grid-template-columns: 45% 45%;
+    column-gap: 10%;
+    width: 193%;
 }
 
 .flex-box{
@@ -246,18 +263,15 @@ textarea{
 }
 input{
     border: none;  
-    width:100%; 
+    width:65%; 
     color: rgba(98, 110, 114, 0.863);
     background-color: rgb(209, 215, 223);
-    padding: 3%;
+    padding: 4%;
     margin-bottom:8%;
-}
-.select-inputs select{
-    width: 180% !important;
 }
 
 select.search-select{
-    width: 90%;
+    width: 100%;
     border: none;
     appearance: none;
     padding: 4% 0% 3% 0%;
@@ -329,6 +343,23 @@ button{
     height: 180vh;
     width:70%;
     row-gap: 2%;
+}
+@media only screen and (max-width: 1000px) {
+
+    .main-div{
+        margin-top: 27%;
+    }
+    .row3{
+        width: 100%;
+    }
+    #contact{
+        width: 54%;
+        padding: 4%;
+    }
+    .contact-button{
+        width: 83%;
+    }
+
 }
 
 </style>

@@ -347,5 +347,12 @@ h2{
         display: none;
     }
 }
+@media only screen and (max-width: 1000px) {
+
+    .properties-main{
+        margin: 26% 0% 0% 0%;
+    }
+
+}
 </style>
 
