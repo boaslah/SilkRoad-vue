@@ -5,11 +5,11 @@
         <div class="main-div">
             
             <div class="row1"> 
-                <div @click="category = true; property = ''; contact = '';">
+                <div @click="category = true; location = ''; property = ''; contact = '';">
                     <span :class="category ? 'active' : ''">Category</span>
                     <hr :class="category ? 'active-hr' : ''">
                 </div>
-                <div @click="location = true; property =''; contact = '';" :class="location ? 'active' : ''"> 
+                <div @click="location = true; category =''; property =''; contact = '';" :class="location ? 'active' : ''"> 
                     <span>Location</span>
                     <hr :class="location ? 'active-hr' : ''">
                 </div>
@@ -28,9 +28,15 @@
                     <span>Select a Category</span>
                     <hr>
                 </div>
-                <div v-if="location">
-                    <span>Select a District with in Grand Cape Mount</span>
-                    <hr>
+                <div class="location" v-if="location">
+                    <div>
+                        <span>Select a County</span>
+                        <hr>
+                    </div>
+                    <div>
+                        <span>Select a District with in Grand Cape Mount</span>
+                        <hr>
+                    </div>
                 </div>
                 <div v-if="property">
                     <span>Provide Property Details</span>
@@ -54,17 +60,29 @@
                     <p>Commercial Properties</p>
                 </div>
 
-                <div v-if="location">
-                    <p>Popular Areas</p>
-                    <p>Commonwealth</p>
-                    <p>Garwula</p>
-                    <p>Gola Konneh</p>
-                    <p>Porkpa District</p>
-                    <p>Tewor District</p>
-                    <p>Other areas within the country</p>
-                    <select class="select-arrow search-select option" name="" id="">
-                        <option value="Rooms">Other areas (A-Z)</option>
-                    </select>
+                <div class="location" v-if="location">
+                    <div>
+                        <p>Houses</p>
+                        <p>Apartments</p>
+                        <p>Office Spaces</p>
+                        <p>Storage Spaces</p>
+                        <p>Rooms</p>
+                        <p>Land</p>
+                        <p>Commercial Properties</p>
+                    </div>
+                    <div>
+                        <p>Popular Areas</p>
+                        <p>Commonwealth</p>
+                        <p>Garwula</p>
+                        <p>Gola Konneh</p>
+                        <p>Porkpa District</p>
+                        <p>Tewor District</p>
+                        <p>Other areas within the country</p>
+                        <select class="select-arrow search-select option" name="" id="">
+                            <option value="Rooms">Other areas (A-Z)</option>
+                        </select>
+                    </div>
+                   
                 </div>
                 <div v-if="property">
                     <div>
@@ -322,6 +340,11 @@ select.select-arrow {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 70%;
+}
+.location{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 200%;
 }
 .row3{
     margin-top: -5%;

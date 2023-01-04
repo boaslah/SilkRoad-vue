@@ -8,7 +8,7 @@
                 <div></div>
 
                 <div class="row1">
-                    <h1 class="title">SILKROAD</h1><i @click="showMenu('cover')" class="fa fa-bars icon"></i>
+                    <h1 class="title">SILKROAD</h1><i @click="showMenu('cover')" class="fa fa-square icon"></i>
                 </div>
 
                 <!-- <div></div> -->
