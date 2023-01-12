@@ -51,24 +51,24 @@
             <div class="row3">
 
                 <div v-if="category">
-                    <p>Houses</p>
-                    <p>Apartments</p>
-                    <p>Office Spaces</p>
-                    <p>Storage Spaces</p>
-                    <p>Rooms</p>
-                    <p>Land</p>
-                    <p>Commercial Properties</p>
+                    <p>Houses <i class="fa fa-circle-arrow-right"></i></p>
+                    <p>Apartments <i class="fa fa-circle-arrow-right"></i></p>
+                    <p>Office Spaces <i class="fa fa-circle-arrow-right"></i></p>
+                    <p>Storage Spaces <i class="fa fa-circle-arrow-right"></i></p>
+                    <p>Rooms <i class="fa fa-circle-arrow-right"></i></p>
+                    <p>Land  <i class="fa fa-circle-arrow-right"></i></p>
+                    <p>Commercial Properties     <i class="fa fa-circle-arrow-right"></i></p>
                 </div>
 
                 <div class="location" v-if="location">
                     <div>
-                        <p>Houses</p>
-                        <p>Apartments</p>
-                        <p>Office Spaces</p>
-                        <p>Storage Spaces</p>
-                        <p>Rooms</p>
-                        <p>Land</p>
-                        <p>Commercial Properties</p>
+                        <p>Houses <i class="fa fa-circle-arrow-right"></i></p>
+                        <p>Apartments <i class="fa fa-circle-arrow-right"></i></p>
+                        <p>Office Spaces <i class="fa fa-circle-arrow-right"></i></p>
+                        <p>Storage Spaces <i class="fa fa-circle-arrow-right"></i></p>
+                        <p>Rooms <i class="fa fa-circle-arrow-right"></i></p>
+                        <p>Land  <i class="fa fa-circle-arrow-right"></i></p>
+                        <p>Commercial Properties     <i class="fa fa-circle-arrow-right"></i></p>
                     </div>
                     <div>
                         <p>Popular Areas</p>
@@ -188,6 +188,12 @@
 </script>
 
 <style lang="scss" scoped>
+.fa-circle-arrow-right{
+    display: inline-block;
+    color: rgba(144, 151, 153, 0.863);
+    float: right;
+    margin-right: 30%;
+}
 .short-select{
     width: 27%;
     padding: 3.5%;
@@ -224,7 +230,7 @@ select{
 }
 .row2 hr{
     margin-left: -1%;
-    width: 70%;
+    width: 95%;
 }
 h3{
     color: rgba(98, 110, 114, 0.863);
@@ -322,6 +328,7 @@ select.select-arrow {
 .row2, p{
     color: rgba(144, 151, 153, 0.863);
 }
+
 
 .row1:hover{
     cursor: pointer;
