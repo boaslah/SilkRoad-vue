@@ -49,7 +49,7 @@
                         
                             <i v-if="menu" class="fa-regular fa-greater-than"></i>
         
-                            <router-link v-if="menu" to="#" class="color-white"><strong>{{menu}}</strong></router-link>
+                            <router-link v-if="menu" :to="`/${menu}`" class="color-white"><strong>{{menu}}</strong></router-link>
                         </div>
 
                         <div class="button-right">
